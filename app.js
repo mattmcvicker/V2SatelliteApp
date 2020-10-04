@@ -1,6 +1,9 @@
 $(document).ready(function () {
   "use strict";
 
+  // On document load, make the markers (async function that queries for the coordinates from the API)
+  makeMarkers();
+
   /**
    * The Globe encapsulates the WorldWindow object (wwd) and provides application
    * specific logic for interacting with layers.
@@ -145,32 +148,61 @@ $(document).ready(function () {
   );
   highlightAttributes.imageScale = 1.2;
 
-  // Create the placemark with the attributes defined above.
-  for (let i = 0; i < 5; i++) {
-    var placemarkPosition = new WorldWind.Position(
-      47.684444,
-      -121.129722 + i,
-      1e2
-    );
-    var placemark = new WorldWind.Placemark(
-      placemarkPosition,
-      false,
-      placemarkAttributes
-    );
+  function queryCoords() {
+    console.log("Querying coordinates...")
+    return new Promise((resolve) => [
+      setTimeout(() => {
+        // TODO: Update the time parameters in this query
+        // TODO: Allow for querying of EVERY satellite
+        axios
+          .get(
+            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace/20200101T000000Z,20200102T001000Z/gse/`
+          )
+          .then(function (response) {
+            console.log("Coords Response", response);                        
+            resolve(response);
+          })
+          .catch(function (error) {
+            console.log("error", error);
+            return error;
+          });
+      }, 100),
+    ]);
+  }
 
-    // Draw placemark at altitude defined above, relative to the terrain.
-    placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
-    // Assign highlight attributes for the placemark.
-    placemark.highlightAttributes = highlightAttributes;
+  //! Dynamically assign placemarkers
+  async function makeMarkers() {
+    const coordsArray = await queryCoords();
+    console.log("Coords array:", coordsArray);
+    for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
+      let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0].Latitude[1][0];
+      let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0].Longitude[1][0];
+      console.log("Placing coordinates:", lat, long)
+      var placemarkPosition = new WorldWind.Position(
+        lat,
+        long,
+        1e2
+      );
+      var placemark = new WorldWind.Placemark(
+        placemarkPosition,
+        false,
+        placemarkAttributes
+      );
 
-    // Create the renderable layer for placemarks.
-    var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
+      // Draw placemark at altitude defined above, relative to the terrain.
+      placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
+      // Assign highlight attributes for the placemark.
+      placemark.highlightAttributes = highlightAttributes;
 
-    // Add the placemark to the layer.
-    placemarkLayer.addRenderable(placemark);
+      // Create the renderable layer for placemarks.
+      var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
 
-    // Add the placemarks layer to the WorldWindow's layer list.
-    globe.wwd.addLayer(placemarkLayer);
+      // Add the placemark to the layer.
+      placemarkLayer.addRenderable(placemark);
+
+      // Add the placemarks layer to the WorldWindow's layer list.
+      globe.wwd.addLayer(placemarkLayer);
+    }
   }
 
   // Now set up to handle highlighting.
