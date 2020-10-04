@@ -78,6 +78,7 @@ $(document).ready(function() {
       category: "setting",
       enabled: false
     });
+    globe.addLayer(new WorldWind.StarFieldLayer())
   
   
     // Auto-collapse the main menu when its button items are clicked
