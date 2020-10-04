@@ -1,3 +1,4 @@
+// when document loads make call to make markers async
 $(document).ready(function () {
   "use strict";
 
@@ -172,7 +173,7 @@ $(document).ready(function () {
 
   //! Dynamically assign placemarkers
   async function makeMarkers() {
-    const coordsArray = await queryCoords();
+    const coordsArray = await queryCoords(); //coordinate array
     console.log("Coords array:", coordsArray);
     for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
       let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0].Latitude[1][0];
