@@ -258,7 +258,7 @@ $(document).ready(function () {
             let removeUnderscore = removeDashes.replace(/_/g, "");
             formattedJSON.push(removeUnderscore);
             // TODO: Find a better way to have proper IDs and time codes for the queries
-            if (set.has(removeUnderscore) && removeUnderscore!=="xmmnewton") {
+            if (set.has(removeUnderscore) && removeUnderscore !== "xmmnewton") {
               data.push(JSONData["UCS-Satellite-Database-4-1-2020"][i]);
               if (set.has(removeUnderscore)) {
                 Ids.push(removeUnderscore);
@@ -367,28 +367,26 @@ $(document).ready(function () {
       markers[0].userObject.label = null;
       markers.pop()
     }
-    if (pickList.objects[0] != undefined) {
-      if (!pickList.objects[0]?.isTerrain) {
+    if (pickList?.objects[0] != undefined) {
+      if (!pickList?.objects[0]?.isTerrain) {
         console.log("PICK LIST:", pickList.objects);
-        pickList.objects[0].userObject.label = pickList.objects[0]?.userObject.attributes?.label;
-        markers.push(pickList.objects[0])
+        pickList.objects[0].userObject.label = pickList?.objects[0]?.userObject.attributes?.label;
+        markers.push(pickList?.objects[0]);
+
+        //! Display the modal card with information
+        // Get the modal
+        var modal = document.getElementById("satelliteModal");
+        var title = document.getElementsByClassName("modalTitle")[0];
+        modal.style.display = "block";
+        var position = pickList.objects[0]?.position;
+        console.log("ANIMATING", position);
+        globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
+        console.log("testing + " + " " + title);
+        title.innerHTML = pickList.objects[0].userObject.label;
       }
     }
     console.log("MARKERS:", markers);
-
-    // Animate to clicked marker position
-    if (!pickList.objects[0]?.isTerrain) {
-      //! Display the modal card with information
-      // Get the modal
-      var modal = document.getElementById("satelliteModal");
-      var title = document.getElementsByClassName("modalTitle")[0];
-      modal.style.display = "block";
-      var position = pickList.objects[0]?.position;
-      console.log("ANIMATING", position);
-      globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
-      console.log("testing + " + " " + title);
-      title.innerHTML = pickList.objects[0].userObject.label;
-    }
+    
   };
 
 
