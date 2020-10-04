@@ -325,16 +325,17 @@ $(document).ready(function () {
         markers.push(pickList.objects[0])
       }
     }
-    console.log("MARKERS:", markers);
+    console.log("MARKERS:", markers);    
 
     // Animate to clicked marker position
-    if (pickList.objects.length == 1 && !pickList.objects[0].isTerrain) {
-      var position = pickList.objects[0].position;
-      console.log("ANIMATING", position);
+    if (!pickList.objects[0].isTerrain) {
       //! Display the modal card with information
       // Get the modal
       var modal = document.getElementById("satelliteModal");
-      modal.style.display = "block";
+      modal.style.display = "block";    
+
+      var position = pickList.objects[0].position;
+      console.log("ANIMATING", position);
       globe.wwd.goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
     }
   };
