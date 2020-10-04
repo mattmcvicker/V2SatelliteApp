@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
   "use strict";
 
@@ -62,7 +60,6 @@ $(document).ready(function () {
       return this.wwd.layers.filter((layer) => layer.category === category);
     }
   }
-  
 
   // Create a globe
   let globe = new Globe("globe-canvas");
@@ -146,32 +143,38 @@ $(document).ready(function () {
   var highlightAttributes = new WorldWind.PlacemarkAttributes(
     placemarkAttributes
   );
-  highlightAttributes.imageScale = 1.2;  
+  highlightAttributes.imageScale = 1.2;
 
   // Create the placemark with the attributes defined above.
-  var placemarkPosition = new WorldWind.Position(47.684444, -121.129722, 1e2);
-  var placemark = new WorldWind.Placemark(
-    placemarkPosition,
-    false,
-    placemarkAttributes
-  );
-  // Draw placemark at altitude defined above, relative to the terrain.
-  placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
-  // Assign highlight attributes for the placemark.
-  placemark.highlightAttributes = highlightAttributes;
+  for (let i = 0; i < 5; i++) {
+    var placemarkPosition = new WorldWind.Position(
+      47.684444,
+      -121.129722 + i,
+      1e2
+    );
+    var placemark = new WorldWind.Placemark(
+      placemarkPosition,
+      false,
+      placemarkAttributes
+    );
 
-  // Create the renderable layer for placemarks.
-  var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
+    // Draw placemark at altitude defined above, relative to the terrain.
+    placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
+    // Assign highlight attributes for the placemark.
+    placemark.highlightAttributes = highlightAttributes;
 
-  // Add the placemark to the layer.
-  placemarkLayer.addRenderable(placemark);
+    // Create the renderable layer for placemarks.
+    var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
 
-  // Add the placemarks layer to the WorldWindow's layer list.
-  globe.wwd.addLayer(placemarkLayer);
+    // Add the placemark to the layer.
+    placemarkLayer.addRenderable(placemark);
+
+    // Add the placemarks layer to the WorldWindow's layer list.
+    globe.wwd.addLayer(placemarkLayer);
+  }
 
   // Now set up to handle highlighting.
   var highlightController = new WorldWind.HighlightController(globe.wwd);
-  
 
   // Auto-collapse the main menu when its button items are clicked
   $('.navbar-collapse a[role="button"]').click(function () {
