@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   // On document load, make the markers (async function that queries for the coordinates from the API)
   makeMarkers();
-
+  var satelliteData = null
   /**
    * The Globe encapsulates the WorldWindow object (wwd) and provides application
    * specific logic for interacting with layers.
@@ -281,6 +281,7 @@ $(document).ready(function () {
     const altitudeValues = await processAltitudes(altitudes);
     const satelliteNames = await querySatellites();
     const purgeData = await cleanData(satelliteNames, altitudeValues);
+    satelliteData = purgeData;
     console.log("PURGE DATA:", purgeData);
     //! purgeData[0] has all the JSON objects with needed info
     //! purgeData[1] has all the Ids of those satellites so we can query them in coordinates
@@ -304,7 +305,7 @@ $(document).ready(function () {
       placemarkAttributes.imageScale = 15;
       placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
       //* @param satelliteNames[1] is an array with all satellite names
-      placemarkAttributes.label = satelliteNames[1][i];
+      placemarkAttributes.label = purgeData[0][i]["Current Official Name of Satellite"];
 
       //! Set placemark highlight attributes. Done inside for loop so each satellite can have unique highlight properties
       // Note that the normal attributes are specified as the default highlight attributes so that all properties
@@ -383,6 +384,28 @@ $(document).ready(function () {
         globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
         console.log("testing + " + " " + title);
         title.innerHTML = pickList.objects[0].userObject.label;
+        console.log(pickList.objects[0])
+        console.log(satelliteData[0])
+        var newData = satelliteData[0]
+        for (var i = 0; i < newData.length; i++) {
+          if (title.innerHTML == newData[i]["Current Official Name of Satellite"]) {
+            var purpose = document.getElementById("purpose");
+            var type = document.getElementById("type");
+            var period = document.getElementById("period");
+            var launch = document.getElementById("launch");
+            var site = document.getElementById("site");
+            var moreinfo = document.getElementById("moreinfo");
+            var url = document.getElementById("url");
+            purpose.innerHTML = "Purpose " + newData[i]["Purpose"]
+            type.innerHTML = "Type of Orbit: " + newData[i]["Type of Orbit"]
+            period.innerHTML = "Period: " + newData[i]["Period (minutes)"]
+            launch.innerHTML = "Launch Date: " + newData[i]["Date of Launch"]
+            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]
+            moreinfo.innerHTML = "More information: ";
+            url.setAttribute("href", newData[i]["Source"])
+            url.innerHTML = newData[i]["Source"]
+          }
+        }
       }
     }
     console.log("MARKERS:", markers);

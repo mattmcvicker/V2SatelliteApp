@@ -121,6 +121,7 @@ Sets the background color of Cards displayed over the globe .globe-card {
   top: 0;
   right: 0;
   left: 23vw;
+  overflow-y: scroll;
 }
 
 /* The Close Button */
