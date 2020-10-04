@@ -118,7 +118,7 @@ $(document).ready(function () {
     c,
     outerRadius
   );
-  gradient.addColorStop(0, "rgb(255, 0, 0)");
+  gradient.addColorStop(0, "rgb(255, 0, 0)"); 
   gradient.addColorStop(0.5, "rgb(0, 255, 0)");
   gradient.addColorStop(1, "rgb(255, 0, 0)");
 
@@ -157,7 +157,7 @@ $(document).ready(function () {
         // TODO: Allow for querying of EVERY satellite
         axios
           .get(
-            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace/20200101T000000Z,20200102T001000Z/gse/`
+            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace,themisa,themisb/20200101T000000Z,20200102T001000Z/gse/`
           )
           .then(function (response) {
             console.log("Coords Response", response);                        
@@ -176,13 +176,13 @@ $(document).ready(function () {
     const coordsArray = await queryCoords(); //coordinate array
     console.log("Coords array:", coordsArray);
     for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
-      let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0].Latitude[1][0];
-      let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0].Longitude[1][0];
+      let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Latitude[1][0];
+      let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Longitude[1][0];
       console.log("Placing coordinates:", lat, long)
       var placemarkPosition = new WorldWind.Position(
         lat,
         long,
-        1e2
+        10000000
       );
       var placemark = new WorldWind.Placemark(
         placemarkPosition,
@@ -191,7 +191,7 @@ $(document).ready(function () {
       );
 
       // Draw placemark at altitude defined above, relative to the terrain.
-      placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
+      placemark.altitudeMode = WorldWind.ABSOLUTE;
       // Assign highlight attributes for the placemark.
       placemark.highlightAttributes = highlightAttributes;
 
