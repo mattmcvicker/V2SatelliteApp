@@ -114,6 +114,7 @@ Sets the background color of Cards displayed over the globe .globe-card {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
+  padding-top: 10px;
   border: 1px solid #888;
   width: 30vw;
   height: 30vh;
