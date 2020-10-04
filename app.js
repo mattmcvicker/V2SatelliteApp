@@ -1,4 +1,3 @@
-
 // when document loads make call to make markers async
 $(document).ready(function () {
   "use strict";
@@ -326,10 +325,22 @@ $(document).ready(function () {
         markers.push(pickList.objects[0])
       }
     }
-    console.log("MARKERS:", markers)
+    console.log("MARKERS:", markers);
+
+    //! Display the modal card with information
+    // Get the modal
+    var modal = document.getElementById("satelliteModal");
+    modal.style.display = "block";
+
+    /*
+
+    
+
+    
+    */
 
     // Animate to clicked marker position
-    if (pickList.objects.length == 1 && !pickList.objects[0].isTerrain) {      
+    if (pickList.objects.length == 1 && !pickList.objects[0].isTerrain) {
       var position = pickList.objects[0].position;
       console.log("ANIMATING", position);
       globe.wwd.goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
@@ -349,7 +360,8 @@ $(document).ready(function () {
   // Collapse card ancestors when the close icon is clicked
   $(".collapse .close").on("click", function () {
     $(this).closest(".collapse").collapse("hide");
-  });
+  });  
+
 
   // function handleClick(recognizer) {
   //   // // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
