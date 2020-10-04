@@ -267,6 +267,12 @@ $(document).ready(function () {
           }
         }
 
+        console.log("SET:", set);
+        // Get altitudes
+        for(let i = 0; i < set.length; i++) {
+
+        }
+
         console.log(data, Ids);
         let formattedData = [data, Ids];
 
@@ -321,6 +327,7 @@ $(document).ready(function () {
       let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Latitude[1][0];
       let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Longitude[1][0];
       let name = coordsArray.data?.Result?.Data[1][i]?.Id;
+      let alt = Math.round((purgeData[0][i]["Apogee (km)"] + purgeData[0][i]["Perigee (km)"])/2);
 
       console.log("Placemark attributes;", placemarkAttributes);
 
@@ -328,7 +335,7 @@ $(document).ready(function () {
       var placemarkPosition = new WorldWind.Position(
         lat,
         long,
-        1000000
+        alt
       );
       var placemark = new WorldWind.Placemark(
         placemarkPosition,
