@@ -238,33 +238,34 @@ $(document).ready(function () {
         var set = new Set();
         let formattedJSON = [];
         let formattedNamesArray = [];
-        let commonNames = [];
+        let data = [];
         // purge data and delete unused JSON entries
         // to lowercase everything and remove spaces and dashes
-        for (let i = 0; i < JSONData["UCS-Satellite-Database-4-1-2020"].length; i++) {
-          if (JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"]) {
-            let lowercase = JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"].toLowerCase();
-            let removeDashes = lowercase.replace(/-|\s/g, "");
-            let removeUnderscore = removeDashes.replace(/_/g, "");
-            formattedJSON.push(removeUnderscore); 
-            set.add(removeUnderscore);       
-          }
-        }        
 
         for (let i = 0; i < namesArray.length; i++) {
           let lowercase = namesArray[i].toLowerCase();
           let removeDashes = lowercase.replace(/-|\s/g, "");
           let removeUnderscore = removeDashes.replace(/_/g, "");
           formattedNamesArray.push(removeUnderscore);
-          if(set.contains(removeUnderscore)) {
-            
-          }
-
+          set.add(removeUnderscore);       
         }
 
-        let formattedData = [formattedJSON, formattedNamesArray];
+        for (let i = 0; i < JSONData["UCS-Satellite-Database-4-1-2020"].length; i++) {
+          if (JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"]) {
+            let lowercase = JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"].toLowerCase();
+            let removeDashes = lowercase.replace(/-|\s/g, "");
+            let removeUnderscore = removeDashes.replace(/_/g, "");
+            formattedJSON.push(removeUnderscore);
+            if (set.has(removeUnderscore)) {
+              data.push(JSONData["UCS-Satellite-Database-4-1-2020"][i]);
+            } 
+          }
+        }        
 
-        resolve(formattedData);
+        console.log(data);
+        // let formattedData = [formattedJSON, formattedNamesArray];
+
+        resolve(data);
       }, 100)
     ])
   }
