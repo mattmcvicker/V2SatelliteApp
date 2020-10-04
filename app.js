@@ -15,7 +15,9 @@ $(document).ready(function () {
     constructor(canvasId) {
       // Create a WorldWindow globe on the specified HTML5 canvas
       this.wwd = new WorldWind.WorldWindow(canvasId);
-
+      // this.wwd.addEventListener("mousemove", function() {
+      //   console.log("FUCK YEAH ITS FUCKING WORKING FUCKIGN BITCH LEGTS")
+      // });
       // Holds the next unique id to be assigned to a layer
       this.nextLayerId = 1;
 
@@ -26,6 +28,8 @@ $(document).ready(function () {
         minActiveAltitude: 0,
       });
     }
+
+
 
     /**
      * Adds a layer to the globe. Applies the optional options' properties to the
@@ -67,7 +71,10 @@ $(document).ready(function () {
 
   // Create a globe
   let globe = new Globe("globe-canvas");
-
+  console.log(globe.wwd)
+  var clickRecognizer = new WorldWind.ClickRecognizer(globe.wwd, function(recognizer) {
+    handleClick(recognizer);
+  });
   // Add layers to the globe
   globe.addLayer(new WorldWind.BMNGLayer(), {
     category: "base",
@@ -118,8 +125,8 @@ $(document).ready(function () {
     c,
     outerRadius
   );
-  gradient.addColorStop(0, "rgb(255, 0, 0)"); 
-  gradient.addColorStop(0.5, "rgb(0, 255, 0)");
+  gradient.addColorStop(0, "rgb(255, 0, 0)");
+  gradient.addColorStop(1, "rgb(255, 213, 0)");
   gradient.addColorStop(1, "rgb(255, 0, 0)");
 
   ctx2d.fillStyle = gradient;
@@ -138,7 +145,7 @@ $(document).ready(function () {
     0.5
   );
   placemarkAttributes.imageScale = 1;
-  placemarkAttributes.imageColor = WorldWind.Color.WHITE;
+  placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
 
   // Set placemark highlight attributes.
   // Note that the normal attributes are specified as the default highlight attributes so that all properties
@@ -147,7 +154,8 @@ $(document).ready(function () {
   var highlightAttributes = new WorldWind.PlacemarkAttributes(
     placemarkAttributes
   );
-  highlightAttributes.imageScale = 1.2;
+  // highlightAttributes.imageScale = 1.2;
+  highlightAttributes.imageColor = WorldWind.Color.RED;
 
   function queryCoords() {
     console.log("Querying coordinates...")
@@ -160,7 +168,7 @@ $(document).ready(function () {
             `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace,themisa,themisb/20200101T000000Z,20200102T001000Z/gse/`
           )
           .then(function (response) {
-            console.log("Coords Response", response);                        
+            console.log("Coords Response", response);
             resolve(response);
           })
           .catch(function (error) {
@@ -182,13 +190,21 @@ $(document).ready(function () {
       var placemarkPosition = new WorldWind.Position(
         lat,
         long,
-        10000000
+        1000000
       );
       var placemark = new WorldWind.Placemark(
         placemarkPosition,
         false,
         placemarkAttributes
       );
+
+      placemark.label = "Fuck yeah bitch"
+
+      var clickRecognizer = new WorldWind.ClickRecognizer(placemark,
+        function (recognizer) {
+          console.log("FUCK THIS ONE IS WORKING BBETETTTER");
+        });
+
 
       // Draw placemark at altitude defined above, relative to the terrain.
       placemark.altitudeMode = WorldWind.ABSOLUTE;
@@ -206,6 +222,22 @@ $(document).ready(function () {
     }
   }
 
+
+  function handleClick(recognizer) {
+    console.log("Wow tsishishish")
+    // console.log(wwd)
+    // Obtain the event location.
+    var x = recognizer.clientX,
+      y = recognizer.clientY;
+
+    // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
+    // relative to the upper left corner of the canvas rather than the upper left corner of the page.
+    var pickList = globe.wwd.pick(globe.wwd.canvasCoordinates(x, y)); //canvas coordinates
+    console.log(pickList)
+  };
+
+
+
   // Now set up to handle highlighting.
   var highlightController = new WorldWind.HighlightController(globe.wwd);
 
@@ -218,4 +250,16 @@ $(document).ready(function () {
   $(".collapse .close").on("click", function () {
     $(this).closest(".collapse").collapse("hide");
   });
+
+  // function handleClick(recognizer) {
+  //   // // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
+  //   // // relative to the upper left corner of the canvas rather than the upper left corner of the page.
+  //   // var pickList = wwd.pick(wwd.canvasCoordinates(x, y));
+
+  //   // // If only one thing is picked and it is the terrain, use a go-to animator to go to the picked location.
+  //   // if (pickList.objects.length == 1 && pickList.objects[0].isTerrain) {
+  //   //   var position = pickList.objects[0].position;
+  //   //   goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
+  //   // }
+  // };
 });
