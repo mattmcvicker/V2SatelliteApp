@@ -72,8 +72,9 @@ $(document).ready(function () {
   // Create a globe
   let globe = new Globe("globe-canvas");
   console.log(globe.wwd)
+  var storeMarkers = []
   var clickRecognizer = new WorldWind.ClickRecognizer(globe.wwd, function(recognizer) {
-    handleClick(recognizer);
+    handleClick(recognizer, storeMarkers);
   });
   // Add layers to the globe
   globe.addLayer(new WorldWind.BMNGLayer(), {
@@ -198,7 +199,7 @@ $(document).ready(function () {
         placemarkAttributes
       );
 
-      placemark.label = "Fuck yeah bitch"
+      
 
       var clickRecognizer = new WorldWind.ClickRecognizer(placemark,
         function (recognizer) {
@@ -222,8 +223,7 @@ $(document).ready(function () {
     }
   }
 
-
-  function handleClick(recognizer) {
+  function handleClick(recognizer, markers) {
     console.log("Wow tsishishish")
     // console.log(wwd)
     // Obtain the event location.
@@ -233,7 +233,21 @@ $(document).ready(function () {
     // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
     // relative to the upper left corner of the canvas rather than the upper left corner of the page.
     var pickList = globe.wwd.pick(globe.wwd.canvasCoordinates(x, y)); //canvas coordinates
-    console.log(pickList)
+    // for(var i = 0; i < 5; i++) {
+    //   console.log(i);
+    // }
+    console.log(pickList.objects[0])
+    if (markers.length != 0) {
+      markers[0].userObject.label = null;
+      markers.pop()
+    }
+    if (pickList.objects[0] != undefined) {
+      if(!pickList.objects[0].isTerrain) {
+        pickList.objects[0].userObject.label = "Whats up bitch"
+        markers.push(pickList.objects[0])
+      }
+    }
+    console.log(markers)
   };
 
 
