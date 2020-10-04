@@ -327,22 +327,14 @@ $(document).ready(function () {
     }
     console.log("MARKERS:", markers);
 
-    //! Display the modal card with information
-    // Get the modal
-    var modal = document.getElementById("satelliteModal");
-    modal.style.display = "block";
-
-    /*
-
-    
-
-    
-    */
-
     // Animate to clicked marker position
     if (pickList.objects.length == 1 && !pickList.objects[0].isTerrain) {
       var position = pickList.objects[0].position;
       console.log("ANIMATING", position);
+      //! Display the modal card with information
+      // Get the modal
+      var modal = document.getElementById("satelliteModal");
+      modal.style.display = "block";
       globe.wwd.goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
     }
   };
@@ -360,7 +352,25 @@ $(document).ready(function () {
   // Collapse card ancestors when the close icon is clicked
   $(".collapse .close").on("click", function () {
     $(this).closest(".collapse").collapse("hide");
-  });  
+  });
+
+  $("#closeModal").on("click", function () {
+    $("#satelliteModal").css('display', 'none');
+  })
+  /* // Get the <span> element that closes the modal
+  var span = document.getElementById("close");
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+ 
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  } */
 
 
   // function handleClick(recognizer) {
