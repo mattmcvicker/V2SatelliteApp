@@ -253,7 +253,7 @@ $(document).ready(function () {
         WorldWind.OFFSET_FRACTION,
         0.5
       );
-      placemarkAttributes.imageScale = 1;
+      placemarkAttributes.imageScale = 15;
       placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
       //* @param satelliteNames[1] is an array with all satellite names
       placemarkAttributes.label = satelliteNames[1][i];
@@ -265,7 +265,8 @@ $(document).ready(function () {
       var highlightAttributes = new WorldWind.PlacemarkAttributes(
         placemarkAttributes
       );
-      // highlightAttributes.imageScale = 1.2;
+      
+      highlightAttributes.imageScale = 20;
       highlightAttributes.imageColor = WorldWind.Color.RED;
 
 
@@ -283,7 +284,7 @@ $(document).ready(function () {
       );
       var placemark = new WorldWind.Placemark(
         placemarkPosition,
-        false,
+        true,
         placemarkAttributes
       );
 
@@ -319,7 +320,7 @@ $(document).ready(function () {
       markers.pop()
     }
     if (pickList.objects[0] != undefined) {
-      if (!pickList.objects[0].isTerrain) {
+      if (!pickList.objects[0]?.isTerrain) {
         console.log("PICK LIST:", pickList.objects);
         pickList.objects[0].userObject.label = pickList.objects[0]?.userObject.attributes?.label;
         markers.push(pickList.objects[0])
@@ -328,15 +329,15 @@ $(document).ready(function () {
     console.log("MARKERS:", markers);    
 
     // Animate to clicked marker position
-    if (!pickList.objects[0].isTerrain) {
+    if (!pickList.objects[0]?.isTerrain) {
       //! Display the modal card with information
       // Get the modal
       var modal = document.getElementById("satelliteModal");
       var title = document.getElementsByClassName("modalTitle")[0];
       modal.style.display = "block";    
-      var position = pickList.objects[0].position;
+      var position = pickList.objects[0]?.position;
       console.log("ANIMATING", position);
-      globe.wwd.goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
+      globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
       console.log("testing + " + " " + title);
       title.innerHTML = pickList.objects[0].userObject.label;
     }
