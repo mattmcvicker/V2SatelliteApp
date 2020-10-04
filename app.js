@@ -332,11 +332,13 @@ $(document).ready(function () {
       //! Display the modal card with information
       // Get the modal
       var modal = document.getElementById("satelliteModal");
+      var title = document.getElementsByClassName("modalTitle")[0];
       modal.style.display = "block";    
-
       var position = pickList.objects[0].position;
       console.log("ANIMATING", position);
       globe.wwd.goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
+      console.log("testing + " + " " + title);
+      title.innerHTML = pickList.objects[0].userObject.label;
     }
   };
 
