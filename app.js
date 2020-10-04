@@ -220,7 +220,7 @@ $(document).ready(function () {
         resolve(data);
       }, 100)
     ])
-    
+
   }
 
   function processAltitudes(altitudes) {
@@ -327,6 +327,13 @@ $(document).ready(function () {
       }
     }
     console.log("MARKERS:", markers)
+
+    // Animate to clicked marker position
+    if (pickList.objects.length == 1 && !pickList.objects[0].isTerrain) {      
+      var position = pickList.objects[0].position;
+      console.log("ANIMATING", position);
+      globe.wwd.goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
+    }
   };
 
 
