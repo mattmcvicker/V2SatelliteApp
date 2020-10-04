@@ -1,4 +1,4 @@
-﻿{
+﻿var data = {
     "UCS-Satellite-Database-4-1-2020": [
         {
             "Current Official Name of Satellite": "1HOPSAT",

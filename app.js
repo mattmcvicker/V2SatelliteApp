@@ -1,10 +1,8 @@
+
 // when document loads make call to make markers async
 $(document).ready(function () {
   "use strict";
-
-  // On document load, make the markers (async function that queries for the coordinates from the API)
   makeMarkers();
-
   /**
    * The Globe encapsulates the WorldWindow object (wwd) and provides application
    * specific logic for interacting with layers.
@@ -15,9 +13,7 @@ $(document).ready(function () {
     constructor(canvasId) {
       // Create a WorldWindow globe on the specified HTML5 canvas
       this.wwd = new WorldWind.WorldWindow(canvasId);
-      // this.wwd.addEventListener("mousemove", function() {
-      //   console.log("FUCK YEAH ITS FUCKING WORKING FUCKIGN BITCH LEGTS")
-      // });
+
       // Holds the next unique id to be assigned to a layer
       this.nextLayerId = 1;
 
@@ -73,7 +69,7 @@ $(document).ready(function () {
   let globe = new Globe("globe-canvas");
   console.log(globe.wwd)
   var storeMarkers = []
-  var clickRecognizer = new WorldWind.ClickRecognizer(globe.wwd, function(recognizer) {
+  var clickRecognizer = new WorldWind.ClickRecognizer(globe.wwd, function (recognizer) {
     handleClick(recognizer, storeMarkers);
   });
   // Add layers to the globe
@@ -166,7 +162,7 @@ $(document).ready(function () {
         // TODO: Allow for querying of EVERY satellite
         axios
           .get(
-            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace,themisa,themisb/20200101T000000Z,20200102T001000Z/gse/`
+            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace,aqua,themisb/20200101T000000Z,20200102T001000Z/gse/`
           )
           .then(function (response) {
             console.log("Coords Response", response);
@@ -199,7 +195,7 @@ $(document).ready(function () {
         placemarkAttributes
       );
 
-      
+
 
       var clickRecognizer = new WorldWind.ClickRecognizer(placemark,
         function (recognizer) {
@@ -224,8 +220,6 @@ $(document).ready(function () {
   }
 
   function handleClick(recognizer, markers) {
-    console.log("Wow tsishishish")
-    // console.log(wwd)
     // Obtain the event location.
     var x = recognizer.clientX,
       y = recognizer.clientY;
@@ -233,21 +227,17 @@ $(document).ready(function () {
     // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
     // relative to the upper left corner of the canvas rather than the upper left corner of the page.
     var pickList = globe.wwd.pick(globe.wwd.canvasCoordinates(x, y)); //canvas coordinates
-    // for(var i = 0; i < 5; i++) {
-    //   console.log(i);
-    // }
-    console.log(pickList.objects[0])
+
     if (markers.length != 0) {
       markers[0].userObject.label = null;
       markers.pop()
     }
     if (pickList.objects[0] != undefined) {
-      if(!pickList.objects[0].isTerrain) {
+      if (!pickList.objects[0].isTerrain) {
         pickList.objects[0].userObject.label = "Whats up bitch"
         markers.push(pickList.objects[0])
       }
     }
-    console.log(markers)
   };
 
 
@@ -265,15 +255,4 @@ $(document).ready(function () {
     $(this).closest(".collapse").collapse("hide");
   });
 
-  // function handleClick(recognizer) {
-  //   // // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
-  //   // // relative to the upper left corner of the canvas rather than the upper left corner of the page.
-  //   // var pickList = wwd.pick(wwd.canvasCoordinates(x, y));
-
-  //   // // If only one thing is picked and it is the terrain, use a go-to animator to go to the picked location.
-  //   // if (pickList.objects.length == 1 && pickList.objects[0].isTerrain) {
-  //   //   var position = pickList.objects[0].position;
-  //   //   goToAnimator.goTo(new WorldWind.Location(position.latitude, position.longitude));
-  //   // }
-  // };
 });
