@@ -178,7 +178,7 @@ $(document).ready(function () {
         // TODO: Allow for querying of EVERY satellite        
         axios
           .get(
-            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/${Ids[0]},${Ids[1]},${Ids[2]},${Ids[3]},${Ids[4]}/20200101T000000Z,20200102T001000Z/gse/`
+            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/${Ids}/20190101T000000Z,20190102T001000Z/gse/`
           )
           .then(function (response) {
             console.log("Coords Response", response);
@@ -239,15 +239,16 @@ $(document).ready(function () {
         let formattedJSON = [];
         let formattedNamesArray = [];
         let data = [];
+        let Ids = [];
         // purge data and delete unused JSON entries
         // to lowercase everything and remove spaces and dashes
 
-        for (let i = 0; i < namesArray.length; i++) {
-          let lowercase = namesArray[i].toLowerCase();
+        for (let i = 0; i < namesArray[1].length; i++) {
+          let lowercase = namesArray[1][i].toLowerCase();
           let removeDashes = lowercase.replace(/-|\s/g, "");
           let removeUnderscore = removeDashes.replace(/_/g, "");
           formattedNamesArray.push(removeUnderscore);
-          set.add(removeUnderscore);       
+          set.add(removeUnderscore, namesArray[0][i]);
         }
 
         for (let i = 0; i < JSONData["UCS-Satellite-Database-4-1-2020"].length; i++) {
@@ -256,16 +257,20 @@ $(document).ready(function () {
             let removeDashes = lowercase.replace(/-|\s/g, "");
             let removeUnderscore = removeDashes.replace(/_/g, "");
             formattedJSON.push(removeUnderscore);
-            if (set.has(removeUnderscore)) {
+            // TODO: Find a better way to have proper IDs and time codes for the queries
+            if (set.has(removeUnderscore) && removeUnderscore!=="xmmnewton") {
               data.push(JSONData["UCS-Satellite-Database-4-1-2020"][i]);
-            } 
+              if (set.has(removeUnderscore)) {
+                Ids.push(removeUnderscore);
+              }
+            }
           }
-        }        
+        }
 
-        console.log(data);
-        // let formattedData = [formattedJSON, formattedNamesArray];
+        console.log(data, Ids);
+        let formattedData = [data, Ids];
 
-        resolve(data);
+        resolve(formattedData);
       }, 100)
     ])
   }
@@ -275,12 +280,14 @@ $(document).ready(function () {
     const altitudes = await getAltitude();
     const altitudeValues = await processAltitudes(altitudes);
     const satelliteNames = await querySatellites();
-    const purgeData = await cleanData(satelliteNames[1], altitudeValues);
+    const purgeData = await cleanData(satelliteNames, altitudeValues);
     console.log("PURGE DATA:", purgeData);
+    //! purgeData[0] has all the JSON objects with needed info
+    //! purgeData[1] has all the Ids of those satellites so we can query them in coordinates
     // satelliteNames returns a nested array with the ids and names for all of the satellites
     console.log("SATELLITE NAMES:", satelliteNames);
     //* @param satelliteNames[0] is an array with all satellite Ids (need these to query coordinates)
-    const coordsArray = await queryCoords(satelliteNames[0]); //coordinate array
+    const coordsArray = await queryCoords(purgeData[1]); //coordinate array
     console.log("Coords array:", coordsArray);
     for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
       //! Set placemark attributes. Declared inside for loop so each satellite can have unique properties
