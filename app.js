@@ -235,8 +235,10 @@ $(document).ready(function () {
     console.log("JSON DATA:", JSONData)
     return new Promise((resolve) => [
       setTimeout(() => {
+        var set = new Set();
         let formattedJSON = [];
-        let formattedNamesArray = []
+        let formattedNamesArray = [];
+        let commonNames = [];
         // purge data and delete unused JSON entries
         // to lowercase everything and remove spaces and dashes
         for (let i = 0; i < JSONData["UCS-Satellite-Database-4-1-2020"].length; i++) {
@@ -244,15 +246,20 @@ $(document).ready(function () {
             let lowercase = JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"].toLowerCase();
             let removeDashes = lowercase.replace(/-|\s/g, "");
             let removeUnderscore = removeDashes.replace(/_/g, "");
-            formattedJSON.push(removeUnderscore);
+            formattedJSON.push(removeUnderscore); 
+            set.add(removeUnderscore);       
           }
-        }
+        }        
 
         for (let i = 0; i < namesArray.length; i++) {
           let lowercase = namesArray[i].toLowerCase();
           let removeDashes = lowercase.replace(/-|\s/g, "");
           let removeUnderscore = removeDashes.replace(/_/g, "");
           formattedNamesArray.push(removeUnderscore);
+          if(set.contains(removeUnderscore)) {
+            
+          }
+
         }
 
         let formattedData = [formattedJSON, formattedNamesArray];
