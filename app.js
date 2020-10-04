@@ -231,11 +231,44 @@ $(document).ready(function () {
     ])
   }
 
+  function cleanData(namesArray, JSONData) {
+    console.log("JSON DATA:", JSONData)
+    return new Promise((resolve) => [
+      setTimeout(() => {
+        let formattedJSON = [];
+        let formattedNamesArray = []
+        // purge data and delete unused JSON entries
+        // to lowercase everything and remove spaces and dashes
+        for (let i = 0; i < JSONData["UCS-Satellite-Database-4-1-2020"].length; i++) {
+          if (JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"]) {
+            let lowercase = JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"].toLowerCase();
+            let removeDashes = lowercase.replace(/-|\s/g, "");
+            let removeUnderscore = removeDashes.replace(/_/g, "");
+            formattedJSON.push(removeUnderscore);
+          }
+        }
+
+        for (let i = 0; i < namesArray.length; i++) {
+          let lowercase = namesArray[i].toLowerCase();
+          let removeDashes = lowercase.replace(/-|\s/g, "");
+          let removeUnderscore = removeDashes.replace(/_/g, "");
+          formattedNamesArray.push(removeUnderscore);
+        }
+
+        let formattedData = [formattedJSON, formattedNamesArray];
+
+        resolve(formattedData);
+      }, 100)
+    ])
+  }
+
   //! Dynamically assign placemarkers
   async function makeMarkers() {
     const altitudes = await getAltitude();
     const altitudeValues = await processAltitudes(altitudes);
     const satelliteNames = await querySatellites();
+    const purgeData = await cleanData(satelliteNames[1], altitudeValues);
+    console.log("PURGE DATA:", purgeData);
     // satelliteNames returns a nested array with the ids and names for all of the satellites
     console.log("SATELLITE NAMES:", satelliteNames);
     //* @param satelliteNames[0] is an array with all satellite Ids (need these to query coordinates)
@@ -265,7 +298,7 @@ $(document).ready(function () {
       var highlightAttributes = new WorldWind.PlacemarkAttributes(
         placemarkAttributes
       );
-      
+
       highlightAttributes.imageScale = 20;
       highlightAttributes.imageColor = WorldWind.Color.RED;
 
@@ -326,7 +359,7 @@ $(document).ready(function () {
         markers.push(pickList.objects[0])
       }
     }
-    console.log("MARKERS:", markers);    
+    console.log("MARKERS:", markers);
 
     // Animate to clicked marker position
     if (!pickList.objects[0]?.isTerrain) {
@@ -334,7 +367,7 @@ $(document).ready(function () {
       // Get the modal
       var modal = document.getElementById("satelliteModal");
       var title = document.getElementsByClassName("modalTitle")[0];
-      modal.style.display = "block";    
+      modal.style.display = "block";
       var position = pickList.objects[0]?.position;
       console.log("ANIMATING", position);
       globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
