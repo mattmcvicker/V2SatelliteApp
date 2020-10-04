@@ -1,3 +1,4 @@
+
 // when document loads make call to make markers async
 $(document).ready(function () {
   "use strict";
@@ -73,7 +74,7 @@ $(document).ready(function () {
   let globe = new Globe("globe-canvas");
   console.log(globe.wwd)
   var storeMarkers = []
-  var clickRecognizer = new WorldWind.ClickRecognizer(globe.wwd, function(recognizer) {
+  var clickRecognizer = new WorldWind.ClickRecognizer(globe.wwd, function (recognizer) {
     handleClick(recognizer, storeMarkers);
   });
   // Add layers to the globe
@@ -134,39 +135,51 @@ $(document).ready(function () {
   ctx2d.arc(c, c, outerRadius, 0, 2 * Math.PI, false);
   ctx2d.fill();
 
-  // Set placemark attributes.
-  var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
-  // Wrap the canvas created above in an ImageSource object to specify it as the placemarkAttributes image source.
-  placemarkAttributes.imageSource = new WorldWind.ImageSource(canvas);
-  // Define the pivot point for the placemark at the center of its image source.
-  placemarkAttributes.imageOffset = new WorldWind.Offset(
-    WorldWind.OFFSET_FRACTION,
-    0.5,
-    WorldWind.OFFSET_FRACTION,
-    0.5
-  );
-  placemarkAttributes.imageScale = 1;
-  placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
 
-  // Set placemark highlight attributes.
-  // Note that the normal attributes are specified as the default highlight attributes so that all properties
-  // are identical except the image scale. You could instead vary the color, image, or other property
-  // to control the highlight representation.
-  var highlightAttributes = new WorldWind.PlacemarkAttributes(
-    placemarkAttributes
-  );
-  // highlightAttributes.imageScale = 1.2;
-  highlightAttributes.imageColor = WorldWind.Color.RED;
 
-  function queryCoords() {
-    console.log("Querying coordinates...")
+
+
+  function querySatellites() {
+    console.log("Querying satellite names...")
+    return new Promise((resolve) => [
+      setTimeout(() => {
+        axios
+          .get("https://sscweb.gsfc.nasa.gov/WS/sscr/2/observatories")
+          .then(function (response) {
+            console.log("Satellite Names Response:", response);
+            let formattedIds = [];
+            let formattedNames = [];
+            for (let i = 0; i < response?.data?.Observatory[1].length; i++) {
+              formattedIds.push(response?.data?.Observatory[1][i]?.Id);
+              formattedNames.push(response?.data?.Observatory[1][i]?.Name);
+            }
+            if (formattedNames.length !== 0 && formattedIds.length !== 0) {
+              let Ids_and_Names_Response = ["", ""];
+              Ids_and_Names_Response[0] = formattedIds;
+              Ids_and_Names_Response[1] = formattedNames;
+              resolve(Ids_and_Names_Response);
+            } else {
+              resolve("Error getting names")
+            }
+          })
+          .catch(function (error) {
+            console.log("error", error);
+            resolve(error);
+          });
+      }, 100),
+    ]);
+  }
+
+
+  function queryCoords(Ids) {
+    console.log("Querying coordinates...", Ids);
     return new Promise((resolve) => [
       setTimeout(() => {
         // TODO: Update the time parameters in this query
-        // TODO: Allow for querying of EVERY satellite
+        // TODO: Allow for querying of EVERY satellite        
         axios
           .get(
-            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/ace,themisa,themisb/20200101T000000Z,20200102T001000Z/gse/`
+            `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/${Ids[0]},${Ids[1]},${Ids[2]},${Ids[3]},${Ids[4]}/20200101T000000Z,20200102T001000Z/gse/`
           )
           .then(function (response) {
             console.log("Coords Response", response);
@@ -174,20 +187,96 @@ $(document).ready(function () {
           })
           .catch(function (error) {
             console.log("error", error);
-            return error;
+            resolve(error);
           });
       }, 100),
     ]);
   }
 
+  /* function getAltitude() {
+    console.log("getting altitude...")
+    return new Promise((resolve) => [
+      setTimeout(() => {
+        var xobj = new XMLHttpRequest();
+        console.log(xobj)
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', './assets/officialNAME.json', true);
+        console.log("open sesame")
+        console.log("in function", xobj.readyState, xobj.status)
+
+        console.log("Parsing JSON...")
+        resolve(JSON.parse(xobj.responseText));
+
+
+      }, 100)]);
+
+  } */
+
+  function getAltitude() {
+    return new Promise((resolve) => [
+      setTimeout(() => {
+        let data = $.getJSON("./assets/officialNAME.json");
+        console.log(data);
+        resolve(data);
+      }, 100)
+    ])
+    
+  }
+
+  function processAltitudes(altitudes) {
+    return new Promise((resolve) => [
+      setTimeout(() => {
+        console.log("Altitudes:", altitudes ? altitudes["UCS-Satellite-Database-4-1-2020"] : "null");
+        resolve(altitudes);
+      }, 100)
+    ])
+  }
+
   //! Dynamically assign placemarkers
   async function makeMarkers() {
-    const coordsArray = await queryCoords(); //coordinate array
+    const altitudes = await getAltitude();
+    const altitudeValues = await processAltitudes(altitudes);
+    const satelliteNames = await querySatellites();
+    // satelliteNames returns a nested array with the ids and names for all of the satellites
+    console.log("SATELLITE NAMES:", satelliteNames);
+    //* @param satelliteNames[0] is an array with all satellite Ids (need these to query coordinates)
+    const coordsArray = await queryCoords(satelliteNames[0]); //coordinate array
     console.log("Coords array:", coordsArray);
     for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
+      //! Set placemark attributes. Declared inside for loop so each satellite can have unique properties
+      var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+      // Wrap the canvas created above in an ImageSource object to specify it as the placemarkAttributes image source.
+      placemarkAttributes.imageSource = new WorldWind.ImageSource(canvas);
+      // Define the pivot point for the placemark at the center of its image source.
+      placemarkAttributes.imageOffset = new WorldWind.Offset(
+        WorldWind.OFFSET_FRACTION,
+        0.5,
+        WorldWind.OFFSET_FRACTION,
+        0.5
+      );
+      placemarkAttributes.imageScale = 1;
+      placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
+      //* @param satelliteNames[1] is an array with all satellite names
+      placemarkAttributes.label = satelliteNames[1][i];
+
+      //! Set placemark highlight attributes. Done inside for loop so each satellite can have unique highlight properties
+      // Note that the normal attributes are specified as the default highlight attributes so that all properties
+      // are identical except the image scale. You could instead vary the color, image, or other property
+      // to control the highlight representation.
+      var highlightAttributes = new WorldWind.PlacemarkAttributes(
+        placemarkAttributes
+      );
+      // highlightAttributes.imageScale = 1.2;
+      highlightAttributes.imageColor = WorldWind.Color.RED;
+
+
       let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Latitude[1][0];
       let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Longitude[1][0];
-      console.log("Placing coordinates:", lat, long)
+      let name = coordsArray.data?.Result?.Data[1][i]?.Id;
+
+      console.log("Placemark attributes;", placemarkAttributes);
+
+      // console.log("Placing coordinates:", lat, long)
       var placemarkPosition = new WorldWind.Position(
         lat,
         long,
@@ -199,16 +288,10 @@ $(document).ready(function () {
         placemarkAttributes
       );
 
-      
-
-      var clickRecognizer = new WorldWind.ClickRecognizer(placemark,
-        function (recognizer) {
-          console.log("FUCK THIS ONE IS WORKING BBETETTTER");
-        });
-
+      // console.log("Place mark", i, ":", placemark);
 
       // Draw placemark at altitude defined above, relative to the terrain.
-      placemark.altitudeMode = WorldWind.ABSOLUTE;
+      placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
       // Assign highlight attributes for the placemark.
       placemark.highlightAttributes = highlightAttributes;
 
@@ -224,30 +307,26 @@ $(document).ready(function () {
   }
 
   function handleClick(recognizer, markers) {
-    console.log("Wow tsishishish")
-    // console.log(wwd)
     // Obtain the event location.
     var x = recognizer.clientX,
       y = recognizer.clientY;
 
     // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
     // relative to the upper left corner of the canvas rather than the upper left corner of the page.
-    var pickList = globe.wwd.pick(globe.wwd.canvasCoordinates(x, y)); //canvas coordinates
-    // for(var i = 0; i < 5; i++) {
-    //   console.log(i);
-    // }
+    var pickList = globe.wwd.pick(globe.wwd.canvasCoordinates(x, y)); //canvas coordinates    
     console.log(pickList.objects[0])
     if (markers.length != 0) {
       markers[0].userObject.label = null;
       markers.pop()
     }
     if (pickList.objects[0] != undefined) {
-      if(!pickList.objects[0].isTerrain) {
-        pickList.objects[0].userObject.label = "Whats up bitch"
+      if (!pickList.objects[0].isTerrain) {
+        console.log("PICK LIST:", pickList.objects);
+        pickList.objects[0].userObject.label = pickList.objects[0]?.userObject.attributes?.label;
         markers.push(pickList.objects[0])
       }
     }
-    console.log(markers)
+    console.log("MARKERS:", markers)
   };
 
 
