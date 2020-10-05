@@ -174,8 +174,7 @@ $(document).ready(function () {
     console.log("Querying coordinates...", Ids);
     return new Promise((resolve) => [
       setTimeout(() => {
-        // TODO: Update the time parameters in this query
-        // TODO: Allow for querying of EVERY satellite        
+        // TODO: Update the time parameters in this query       
         axios
           .get(
             `https://sscweb.gsfc.nasa.gov/WS/sscr/2/locations/${Ids}/20190101T000000Z,20190102T001000Z/gse/`
@@ -211,10 +210,10 @@ $(document).ready(function () {
 
   } */
 
-  function getAltitude() {
+  function getSatelliteMetaData() {
     return new Promise((resolve) => [
       setTimeout(() => {
-        let data = $.getJSON("./assets/officialNAME.json");
+        let data = $.getJSON("./assets/moreData.json");
         console.log(data);
         resolve(data);
       }, 100)
@@ -222,16 +221,16 @@ $(document).ready(function () {
 
   }
 
-  function processAltitudes(altitudes) {
+  function processSatelliteMetaData(JSONData) {
     return new Promise((resolve) => [
       setTimeout(() => {
-        console.log("Altitudes:", altitudes ? altitudes["UCS-Satellite-Database-4-1-2020"] : "null");
-        resolve(altitudes);
+        console.log("JSONData:", JSONData ? JSONData["Sheet1"] : "null");
+        resolve(JSONData);
       }, 100)
     ])
   }
 
-  function cleanData(namesArray, JSONData) {
+  /* function cleanData(namesArray, JSONData) {
     console.log("JSON DATA:", JSONData)
     return new Promise((resolve) => [
       setTimeout(() => {
@@ -245,33 +244,30 @@ $(document).ready(function () {
 
         for (let i = 0; i < namesArray[1].length; i++) {
           let lowercase = namesArray[1][i].toLowerCase();
-          let removeDashes = lowercase.replace(/-|\s/g, "");
+          let removeParens = lowercase.replace(/[()]/g, "");
+          let removeDashes = removeParens.replace(/-|\s/g, "");        
           let removeUnderscore = removeDashes.replace(/_/g, "");
           formattedNamesArray.push(removeUnderscore);
           set.add(removeUnderscore, namesArray[0][i]);
         }
 
-        for (let i = 0; i < JSONData["UCS-Satellite-Database-4-1-2020"].length; i++) {
-          if (JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"]) {
-            let lowercase = JSONData["UCS-Satellite-Database-4-1-2020"][i]["Current Official Name of Satellite"].toLowerCase();
-            let removeDashes = lowercase.replace(/-|\s/g, "");
+        for (let i = 0; i < JSONData["Sheet1"].length; i++) {
+          if (JSONData["Sheet1"][i]["Current Official Name of Satellite"]) {
+            let lowercase = JSONData["Sheet1"][i]["Current Official Name of Satellite"].toLowerCase();
+            let removeParens = lowercase.replace(/[()]/g, "");
+          let removeDashes = removeParens.replace(/-|\s/g, "");     
             let removeUnderscore = removeDashes.replace(/_/g, "");
             formattedJSON.push(removeUnderscore);
             // TODO: Find a better way to have proper IDs and time codes for the queries
             if (set.has(removeUnderscore) && removeUnderscore !== "xmmnewton") {
-              data.push(JSONData["UCS-Satellite-Database-4-1-2020"][i]);
+              data.push(JSONData["Sheet1"][i]);
               if (set.has(removeUnderscore)) {
                 Ids.push(removeUnderscore);
               }
             }
           }
         }
-
-        console.log("SET:", set);
-        // Get altitudes
-        for(let i = 0; i < set.length; i++) {
-
-        }
+        console.log("SET:", set);        
 
         console.log(data, Ids);
         let formattedData = [data, Ids];
@@ -279,86 +275,145 @@ $(document).ready(function () {
         resolve(formattedData);
       }, 100)
     ])
-  }
+  } */
 
   //! Dynamically assign placemarkers
   async function makeMarkers() {
-    const altitudes = await getAltitude();
-    const altitudeValues = await processAltitudes(altitudes);
+    const JSONData = await getSatelliteMetaData();
+    const satelliteMetaData = await processSatelliteMetaData(JSONData);
     const satelliteNames = await querySatellites();
-    const purgeData = await cleanData(satelliteNames, altitudeValues);
-    satelliteData = purgeData;
-    console.log("PURGE DATA:", purgeData);
+    // const purgeData = await cleanData(satelliteNames, altitudeValues);
+    satelliteData = satelliteMetaData["Sheet1"];
+    console.log("SATELLITE META DATA:", satelliteData)
+    // console.log("PURGE DATA:", purgeData);
     //! purgeData[0] has all the JSON objects with needed info
     //! purgeData[1] has all the Ids of those satellites so we can query them in coordinates
     // satelliteNames returns a nested array with the ids and names for all of the satellites
     console.log("SATELLITE NAMES:", satelliteNames);
     //* @param satelliteNames[0] is an array with all satellite Ids (need these to query coordinates)
-    const coordsArray = await queryCoords(purgeData[1]); //coordinate array
-    console.log("Coords array:", coordsArray);
-    for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
-      //! Set placemark attributes. Declared inside for loop so each satellite can have unique properties
-      var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
-      // Wrap the canvas created above in an ImageSource object to specify it as the placemarkAttributes image source.
-      placemarkAttributes.imageSource = new WorldWind.ImageSource(canvas);
-      // Define the pivot point for the placemark at the center of its image source.
-      placemarkAttributes.imageOffset = new WorldWind.Offset(
-        WorldWind.OFFSET_FRACTION,
-        0.5,
-        WorldWind.OFFSET_FRACTION,
-        0.5
-      );
-      placemarkAttributes.imageScale = 15;
-      placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
-      //* @param satelliteNames[1] is an array with all satellite names
-      placemarkAttributes.label = purgeData[0][i]["Current Official Name of Satellite"];
-
-      //! Set placemark highlight attributes. Done inside for loop so each satellite can have unique highlight properties
-      // Note that the normal attributes are specified as the default highlight attributes so that all properties
-      // are identical except the image scale. You could instead vary the color, image, or other property
-      // to control the highlight representation.
-      var highlightAttributes = new WorldWind.PlacemarkAttributes(
-        placemarkAttributes
-      );
-
-      highlightAttributes.imageScale = 20;
-      highlightAttributes.imageColor = WorldWind.Color.RED;
+    //* @param satelliteNames[1] is an array with all satellite Names
+    //! Need to make requests in smaller chunks so that we don't overload the API
 
 
-      let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Latitude[1][0];
-      let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Longitude[1][0];
-      let name = coordsArray.data?.Result?.Data[1][i]?.Id;
-      let alt = Math.round((purgeData[0][i]["Apogee (km)"] + purgeData[0][i]["Perigee (km)"])/2);
+    // Break up the data into 50 part chunks for query
+    /* for(let i = 0; i < satelliteNames[0].length; i++) {
+      if(i <= 50) {
 
-      console.log("Placemark attributes;", placemarkAttributes);
+      }
+    } */
 
-      // console.log("Placing coordinates:", lat, long)
-      var placemarkPosition = new WorldWind.Position(
-        lat,
-        long,
-        alt
-      );
-      var placemark = new WorldWind.Placemark(
-        placemarkPosition,
-        true,
-        placemarkAttributes
-      );
+    //TODO: This is a terrible way to go about this, it's hard coded to a fixed size data set. There are much better ways to make queries in increments of 50. FIX THIS!
+    let bulkQuery1 = [];
+    for (let i = 0; i < 50; i++) {
+      if (i < satelliteNames[0].length) {
+        bulkQuery1.push(satelliteNames[0][i]);
+      }
+    }
+    const query1 = await queryCoords(bulkQuery1);
 
-      // console.log("Place mark", i, ":", placemark);
+    let bulkQuery2 = [];
+    for (let i = 50; i < 100; i++) {
+      if (i < satelliteNames[0].length) {
+        bulkQuery2.push(satelliteNames[0][i]);
+      }
+    }
+    const query2 = await queryCoords(bulkQuery2);
 
-      // Draw placemark at altitude defined above, relative to the terrain.
-      placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
-      // Assign highlight attributes for the placemark.
-      placemark.highlightAttributes = highlightAttributes;
+    let bulkQuery3 = [];
+    for (let i = 100; i < 150; i++) {
+      if (i < satelliteNames[0].length) {
+        bulkQuery3.push(satelliteNames[0][i]);
+      }
+    }
+    const query3 = await queryCoords(bulkQuery3);
 
-      // Create the renderable layer for placemarks.
-      var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
+    let bulkQuery4 = [];
+    for (let i = 150; i < 200; i++) {
+      if (i < satelliteNames[0].length) {
+        bulkQuery4.push(satelliteNames[0][i]);
+      }
+    }
+    const query4 = await queryCoords(bulkQuery4);
 
-      // Add the placemark to the layer.
-      placemarkLayer.addRenderable(placemark);
+    let bulkQuery5 = [];
+    for (let i = 200; i < 250; i++) {
+      if (i < satelliteNames[0].length) {
+        bulkQuery5.push(satelliteNames[0][i]);
+      }
+    }
+    const query5 = await queryCoords(bulkQuery5);
 
-      // Add the placemarks layer to the WorldWindow's layer list.
-      globe.wwd.addLayer(placemarkLayer);
+
+    const coordsArrayUnformatted = [query1, query2, query3, query4, query5];
+
+    // const coordsArray = await queryCoords(satelliteNames[0]); //coordinate array
+    console.log("Coords array:", coordsArrayUnformatted);
+    for (let i = 0; i < coordsArrayUnformatted.length; i++) {
+      for (let j = 0; j < coordsArrayUnformatted[i]?.data?.Result?.Data[1].length; j++) {
+        //! Set placemark attributes. Declared inside for loop so each satellite can have unique properties
+        var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+        // Wrap the canvas created above in an ImageSource object to specify it as the placemarkAttributes image source.
+        placemarkAttributes.imageSource = new WorldWind.ImageSource(canvas);
+        // Define the pivot point for the placemark at the center of its image source.
+        placemarkAttributes.imageOffset = new WorldWind.Offset(
+          WorldWind.OFFSET_FRACTION,
+          0.5,
+          WorldWind.OFFSET_FRACTION,
+          0.5
+        );
+        placemarkAttributes.imageScale = 15;
+        placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
+        //* @param satelliteNames[1] is an array with all satellite names
+        placemarkAttributes.label = satelliteData[j]["Current Official Name of Satellite"];
+        placemarkAttributes.index = j;
+
+        //! Set placemark highlight attributes. Done inside for loop so each satellite can have unique highlight properties
+        // Note that the normal attributes are specified as the default highlight attributes so that all properties
+        // are identical except the image scale. You could instead vary the color, image, or other property
+        // to control the highlight representation.
+        var highlightAttributes = new WorldWind.PlacemarkAttributes(
+          placemarkAttributes
+        );
+
+        highlightAttributes.imageScale = 20;
+        highlightAttributes.imageColor = WorldWind.Color.RED;
+
+
+        let lat = coordsArrayUnformatted[i]?.data?.Result?.Data[1][j]?.Coordinates[1][0]?.Latitude[1][0];
+        let long = coordsArrayUnformatted[i]?.data?.Result?.Data[1][j]?.Coordinates[1][0]?.Longitude[1][0];
+        let name = coordsArrayUnformatted[i]?.data?.Result?.Data[1][j]?.Id;
+        let alt = Math.round((satelliteData[j]["Apogee (km)"] + satelliteData[j]["Perigee (km)"]) / 2);
+
+        console.log("Placemark attributes;", placemarkAttributes);
+
+        // console.log("Placing coordinates:", lat, long)
+        var placemarkPosition = new WorldWind.Position(
+          lat,
+          long,
+          alt
+        );
+        var placemark = new WorldWind.Placemark(
+          placemarkPosition,
+          true,
+          placemarkAttributes
+        );
+
+        // console.log("Place mark", i, ":", placemark);
+
+        // Draw placemark at altitude defined above, relative to the terrain.
+        placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
+        // Assign highlight attributes for the placemark.
+        placemark.highlightAttributes = highlightAttributes;
+
+        // Create the renderable layer for placemarks.
+        var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
+
+        // Add the placemark to the layer.
+        placemarkLayer.addRenderable(placemark);
+
+        // Add the placemarks layer to the WorldWindow's layer list.
+        globe.wwd.addLayer(placemarkLayer);
+      }
     }
   }
 
@@ -379,6 +434,7 @@ $(document).ready(function () {
       if (!pickList?.objects[0]?.isTerrain) {
         console.log("PICK LIST:", pickList.objects);
         pickList.objects[0].userObject.label = pickList?.objects[0]?.userObject.attributes?.label;
+        pickList.objects[0].userObject.index = pickList?.objects[0]?.userObject.attributes?.index;
         markers.push(pickList?.objects[0]);
 
         //! Display the modal card with information
@@ -391,30 +447,30 @@ $(document).ready(function () {
         globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
         console.log("testing + " + " " + title);
         title.innerHTML = pickList.objects[0].userObject.label;
-        console.log(pickList.objects[0])
-        console.log(satelliteData[0])
-        var newData = satelliteData[0]
-        for (var i = 0; i < newData.length; i++) {
-          if (title.innerHTML == newData[i]["Current Official Name of Satellite"]) {
-            var purpose = document.getElementById("purpose");
-            var type = document.getElementById("type");
-            var period = document.getElementById("period");
-            var launch = document.getElementById("launch");
-            var site = document.getElementById("site");
-            var moreinfo = document.getElementById("moreinfo");
-            var url = document.getElementById("url");
-            purpose.innerHTML = "Purpose: " + newData[i]["Purpose"]
-            type.innerHTML = "Type of Orbit: " + newData[i]["Type of Orbit"]
-            period.innerHTML = "Period: " + newData[i]["Period (minutes)"]
-            launch.innerHTML = "Launch Date: " + newData[i]["Date of Launch"]
-            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]            
-            url.setAttribute("href", newData[i]["Source"]);
-          }
+        console.log(pickList.objects[0]);
+        console.log(satelliteData);
+        var newData = satelliteData[pickList.objects[0].userObject.index];
+        console.log("NEW DATA:", newData, newData["Description"]);
+
+        if (title.innerHTML == newData["Current Official Name of Satellite"]) {
+          var purpose = document.getElementById("purpose");
+          var type = document.getElementById("type");
+          var period = document.getElementById("period");
+          var launch = document.getElementById("launch");
+          var site = document.getElementById("site");
+          var url = document.getElementById("url");
+          purpose.innerHTML = "Description: " + newData["Description"]
+          type.innerHTML = "Type of Orbit: " + newData["Type of Orbit"]
+          period.innerHTML = "Period: " + newData["Period (minutes)"]
+          launch.innerHTML = "Launch Date: " + newData["Date of Launch"]
+          site.innerHTML = "Launch Site: " + newData["Launch Site"]
+          url.setAttribute("href", newData["Source"]);
         }
+
       }
     }
     console.log("MARKERS:", markers);
-    
+
   };
 
 
