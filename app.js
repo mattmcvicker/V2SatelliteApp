@@ -16,7 +16,6 @@ $(document).ready(function () {
       // Create a WorldWindow globe on the specified HTML5 canvas
       this.wwd = new WorldWind.WorldWindow(canvasId);
       // this.wwd.addEventListener("mousemove", function() {
-      //   console.log("FUCK YEAH ITS FUCKING WORKING FUCKIGN BITCH LEGTS")
       // });
       // Holds the next unique id to be assigned to a layer
       this.nextLayerId = 1;
@@ -267,12 +266,6 @@ $(document).ready(function () {
           }
         }
 
-        console.log("SET:", set);
-        // Get altitudes
-        for(let i = 0; i < set.length; i++) {
-
-        }
-
         console.log(data, Ids);
         let formattedData = [data, Ids];
 
@@ -328,7 +321,6 @@ $(document).ready(function () {
       let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Latitude[1][0];
       let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Longitude[1][0];
       let name = coordsArray.data?.Result?.Data[1][i]?.Id;
-      let alt = Math.round((purgeData[0][i]["Apogee (km)"] + purgeData[0][i]["Perigee (km)"])/2);
 
       console.log("Placemark attributes;", placemarkAttributes);
 
@@ -336,7 +328,7 @@ $(document).ready(function () {
       var placemarkPosition = new WorldWind.Position(
         lat,
         long,
-        alt
+        1000000
       );
       var placemark = new WorldWind.Placemark(
         placemarkPosition,
@@ -403,12 +395,14 @@ $(document).ready(function () {
             var site = document.getElementById("site");
             var moreinfo = document.getElementById("moreinfo");
             var url = document.getElementById("url");
-            purpose.innerHTML = "Purpose: " + newData[i]["Purpose"]
+            purpose.innerHTML = "Purpose " + newData[i]["Purpose"]
             type.innerHTML = "Type of Orbit: " + newData[i]["Type of Orbit"]
             period.innerHTML = "Period: " + newData[i]["Period (minutes)"]
             launch.innerHTML = "Launch Date: " + newData[i]["Date of Launch"]
-            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]            
-            url.setAttribute("href", newData[i]["Source"]);
+            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]
+            moreinfo.innerHTML = "More information: ";
+            url.setAttribute("href", newData[i]["Source"])
+            url.innerHTML = newData[i]["Source"]
           }
         }
       }
