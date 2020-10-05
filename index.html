@@ -154,17 +154,22 @@
 
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="closeModal" id="closeModal">&times;</span>
-        <h3 class="modalTitle">Title goes here</h3>        
-        <p id="purpose">Purpose: </p>
-        <p id="type">Type of Orbit: </p>
-        <!-- <p id="type">Median Altitude: </p> -->
-        <p id="period">Period: </p>
-        <p id="launch">Launch Date: </p>
-        <p id="site">Launch Site: </p>
-        <p id="moreinfo">More Information:</p>
-        <a id="url" href="url"></a>
+        <div class="titleBar">
+          <span class="closeModal" id="closeModal">&times;</span>
+          <h3 class="modalTitle">Title goes here</h3>
+        </div>
+        <div class="modal-metadata">
+          <p id="purpose">Purpose: </p>
+          <p id="type">Type of Orbit: </p>
+          <!-- <p id="type">Median Altitude: </p> -->
+          <p id="period">Period: </p>
+          <p id="launch">Launch Date: </p>
+          <p id="site">Launch Site: </p>
+          <p id="moreinfo"><a id="url" href="">More Information</a></p>
+
+        </div>
       </div>
+    </div>
 
     </div>
 
@@ -185,7 +190,7 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/worldwindjs@1.5.90/build/dist/worldwind.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="app.js"></script>  
+  <script src="app.js"></script>
 </body>
 
 </html>
