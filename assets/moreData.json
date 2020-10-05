@@ -1,0 +1,1337 @@
+﻿{
+    "Sheet1": [
+        {
+            "Current Official Name of Satellite": "ACE",
+            "Operator/Owner": "NASA",
+            "Description": "The NASA Advanced Composition Explorer (ACE) satellite enables SWPC to give advance warning of geomagnetic storms. Geomagnetic storms are a natural hazard, like hurricanes and tsunamis, which the National Oceanic and Atmospheric Administration (NOAA) Space Weather Prediction Center (SWPC) forecasts for the public's benefit. Geomagnetic storms impact the electric power grid, aircraft operations, GPS, manned spaceflight, and satellite operations, to name some of the most damaging. Severe geomagnetic storms can result in electric utility blackouts over a wide area.",
+            "Type of Orbit": "Lissajous orbit",
+            "Perigee (km)": "145700000",
+            "Apogee (km)": "150550000",
+            "Period (minutes)": "525600",
+            "Date of Launch": "8/25/1997",
+            "Launch Site": "Cape Canaveral, LC-17A",
+            "Source": "https://en.wikipedia.org/wiki/Advanced_Composition_Explorer"
+        },
+        {
+            "Current Official Name of Satellite": "Active"
+        },
+        {
+            "Current Official Name of Satellite": "AEROCUBE-6A",
+            "Operator/Owner": "Aerospace Corporation",
+            "Description": "The AeroCube 6 cubesat is a pair of nanosatellite for technical research. They were built and operated by the Aerospace Corporation. Aerocube 6 represents a major upgrate in the Aerocube program as it introduces a redesigned cubesat structure and technical upgrades. It features a suite of micro dosimeters for measuring radiation in the space environment. Aerocube 6 consists of two spin-stabized sun-pointing 0.5U cubesats, which separate in orbit. The payload consists of miniaturized dosimeters, an inter-satellite cross-link experiment, an integrated flight computer, GPS receiver and UHF tranceiver board and new attitude sensors. AeroCube 6 was deployed from the Italian UniSat 6, which in turn was launched aboard a Dnepr launch vehicle operated by Kosmotras. After reaching orbit, it separated into two satellites, AeroCube 6A and AeroCube 6B.",
+            "Type of Orbit": "Elliptical orbit",
+            "Perigee (km)": "609.6",
+            "Apogee (km)": "691",
+            "Period (minutes)": "97.6",
+            "Date of Launch": "6/19/2014",
+            "Launch Site": "Orenburg, Russia",
+            "Source": "https://space.skyrocket.de/doc_sdat/aerocube-6.htm"
+        },
+        {
+            "Current Official Name of Satellite": "AEROCUBE-6B",
+            "Operator/Owner": "Aerospace Coporation",
+            "Description": "The AeroCube 6 cubesat is a pair of nanosatellite for technical research. They were built and operated by the Aerospace Corporation. Aerocube 6 represents a major upgrate in the Aerocube program as it introduces a redesigned cubesat structure and technical upgrades. It features a suite of micro dosimeters for measuring radiation in the space environment. Aerocube 6 consists of two spin-stabized sun-pointing 0.5U cubesats, which separate in orbit. The payload consists of miniaturized dosimeters, an inter-satellite cross-link experiment, an integrated flight computer, GPS receiver and UHF tranceiver board and new attitude sensors. AeroCube 6 was deployed from the Italian UniSat 6, which in turn was launched aboard a Dnepr launch vehicle operated by Kosmotras. After reaching orbit, it separated into two satellites, AeroCube 6A and AeroCube 6B.",
+            "Type of Orbit": "Elliptical orbit",
+            "Perigee (km)": "610.2",
+            "Apogee (km)": "690.4",
+            "Period (minutes)": "97.6",
+            "Date of Launch": "6/19/2014",
+            "Launch Site": "Orenburg, Russia",
+            "Source": "https://space.skyrocket.de/doc_sdat/aerocube-6.htm"
+        },
+        {
+            "Current Official Name of Satellite": "AIM",
+            "Operator/Owner": "NASA",
+            "Description": "The Aeronomy of Ice in the Mesosphere (AIM) is a satellite originally launched to conduct a 26-month study of noctilucent clouds. Its mission was extended, and as of 2019 is still operational. It is the ninetieth Explorer program mission and is part of the NASA-funded Small Explorer program (SMEX). On April 25, 2007 AIM was boosted into a 600 km (370 mi) high polar orbit by a Pegasus-XL rocket, which was air-launched from the Lockheed L-1011 Stargazer aircraft operated by Orbital Sciences.",
+            "Type of Orbit": "Sun-synchronous orbit",
+            "Perigee (km)": "552",
+            "Apogee (km)": "559",
+            "Period (minutes)": "95.63",
+            "Date of Launch": "4/25/2007",
+            "Launch Site": "Stargazer, Vandenburg",
+            "Source": "http://aim.hamptonu.edu/"
+        },
+        {
+            "Current Official Name of Satellite": "Akebono",
+            "Operator/Owner": "ISAS",
+            "Description": "Akebono (known as EXOS-D before launch) is a satellite to study aurora and Earth's magnetosphere environment. It was developed by Institute of Space and Astronautical Science and launched by M-3SII rocket on February 22, 1989. After 26 years of successful observation, operation was terminated on April 23, 2015, due to the degradation of solar cells and the decay of orbit.",
+            "Type of Orbit": "Low Earth orbit",
+            "Perigee (km)": "300",
+            "Apogee (km)": "8000",
+            "Period (minutes)": "118.7",
+            "Date of Launch": "2/21/1989",
+            "Launch Site": "Uchinoura Space Center, Japan",
+            "Source": "https://en.wikipedia.org/wiki/Akebono_(satellite)",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Alouette-1",
+            "Operator/Owner": "Canada",
+            "Description": "Alouette 1 is a deactivated Canadian satellite that studied the ionosphere. Launched in 1962, it was Canada's first satellite, and the first satellite constructed by a country other than the Soviet Union or the United States. Canada was the fourth country to operate a satellite, as the British Ariel 1, constructed in the United States by NASA, preceded Alouette 1 by five months. The name \"Alouette\" came from the French for \"skylark\" and the French-Canadian folk song of the same name. A key device on Alouette were the radio antennas consisting of thin strips of beryllium copper bent into a slight U-shape and then rolled up into small disks in a fashion similar to a measuring tape. When triggered, the rotation of the satellite created enough centrifugal force to pull the disk away from the spacecraft body, and the shaping of the metal caused it to unwind into a long spiral. The result was a stiff circular cross-section antenna known as a \"STEM\", for \"storable tubular extendible member\".",
+            "Type of Orbit": "Low Earth orbit",
+            "Perigee (km)": "985",
+            "Apogee (km)": "1020",
+            "Period (minutes)": "105.18",
+            "Date of Launch": "9/29/1962",
+            "Launch Site": "Vandenberg LC-75-1-1",
+            "Source": "https://en.wikipedia.org/wiki/Alouette_1",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Alouette-2",
+            "Operator/Owner": "Canada",
+            "Description": "Alouette 2 was a Canadian research satellite launched at 04:48 UTC on November 29, 1965, by a Thor Agena rocket with Explorer 31 from the Western test range at Vandenberg AFB in California.It was built up from the identical backup satellite to Alouette 1. It had many more experiments and more sophisticated support systems than the earlier satellite. It lasted for 10 years, being terminated on August 1, 1975.",
+            "Type of Orbit": "Medium Earth orbit",
+            "Perigee (km)": "508",
+            "Apogee (km)": "2652",
+            "Period (minutes)": "117.61",
+            "Date of Launch": "11/29/1965",
+            "Launch Site": "Vandenberg LC-75-1-1",
+            "Source": "https://en.wikipedia.org/wiki/Alouette_2",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "APEX-MAIN",
+            "Operator/Owner": "NASA",
+            "Description": "The lone dedicated Soviet science mission of the year lifted off from Plesetsk aboard a Tsyklon (SL-14) booster. Intercosmos 25 was part of the APEX (Active Plasma Experiment) program to investigate the effects of streams of electrons and beams of plasma on the ionosphere and magnetosphere. The spacecraft was cylindrical, measuring 1.8 m long, 1.5 m in diameter. Eight solar panels extended in petal-like fashion from one end. It weighed about one metric ton at launch. A Czechoslovakian subsatellite, Magion 3, was deployed from Intercosmos 25 on December 28.",
+            "Type of Orbit": "Elliptical orbit",
+            "Perigee (km)": "440",
+            "Apogee (km)": "3080",
+            "Period (minutes)": "121.7",
+            "Date of Launch": "12/18/1991",
+            "Launch Site": "Plesetsk, U.S.S.R.",
+            "Source": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1991-086A",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Aqua",
+            "Operator/Owner": "NASA",
+            "Description": "Aqua, Latin for water, is a NASA Earth Science satellite mission named for the large amount of information that the mission is collecting about the Earth's water cycle, including evaporation from the oceans, water vapor in the atmosphere, clouds, precipitation, soil moisture, sea ice, land ice, and snow cover on the land and ice. Additional variables also being measured by Aqua include radiative energy fluxes, aerosols, vegetation cover on the land, phytoplankton and dissolved organic matter in the oceans, and air, land, and water temperatures. The Aqua mission is a part of the NASA-centered international Earth Observing System (EOS). Aqua was formerly named EOS PM, signifying its afternoon equatorial crossing time.",
+            "Type of Orbit": "Low Earth orbit",
+            "Perigee (km)": "702",
+            "Apogee (km)": "703",
+            "Period (minutes)": "99",
+            "Date of Launch": "5/4/2002",
+            "Launch Site": "Vandenberg SLC-2W",
+            "Source": "https://aqua.nasa.gov/"
+        },
+        {
+            "Current Official Name of Satellite": "Arase (ERG)",
+            "Operator/Owner": "ISAS",
+            "Description": "ARASE (ERG) aims at elucidating how highly charged electrons have been born while they generate and vanish repeatedly along with space storms caused by the disturbance of solar wind caused by space storms, and how space storms are developed. This probe is designed for the direct observation of the process by which the high energy electrons that exist in the Van Allen belt are generated. The probe will observe the process that generate this high energy in the middle of the radiation belt in order to examine how storms develop in space and how particles are generated along with the storms that occur in space due to the disturbances of the solar winds.",
+            "Type of Orbit": "Elliptical orbit",
+            "Perigee (km)": "440",
+            "Apogee (km)": "32000",
+            "Period (minutes)": "570",
+            "Date of Launch": "12/20/2016",
+            "Launch Site": "Uchinoura Space Center, Japan",
+            "Source": "http://www.isas.jaxa.jp/en/missions/spacecraft/current/erg.html"
+        },
+        {
+            "Current Official Name of Satellite": "ARIEL-4",
+            "Operator/Owner": "SERC / NASA",
+            "Description": "Ariel 4, known pre-launch as UK 4, was a British ionospheric research satellite, which was operated by the Science and Engineering Research Council. It was launched 11 December 1971, aboard an American Scout rocket. Experiments were designed to meet one scientific objective, making it the first mission-oriented satellite for the UK. It was also the first satellite in the Ariel programme to contain an American experiment. Ariel 4 decayed from orbit on 12 December 1978.",
+            "Type of Orbit": "Low Earth orbit",
+            "Perigee (km)": "473",
+            "Apogee (km)": "590",
+            "Period (minutes)": "95.26",
+            "Date of Launch": "1/10/1972",
+            "Launch Site": "Vandenburg SLC-5",
+            "Source": "https://en.wikipedia.org/wiki/Ariel_4",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "ARTEMIS_P1",
+            "Operator/Owner": "NASA",
+            "Description": "Artemis-P1 was the first unit of the constellation of 2 satellites observing the Magnetosphere frm lunar orbits. It's main mission is to observe space weather and magnetosphere processes.",
+            "Type of Orbit": "Lunar orbit",
+            "Perigee (km)": "323100",
+            "Apogee (km)": "323100",
+            "Period (minutes)": "20880",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "AIR FORCE EASTERN TEST RANGE (AFETR)",
+            "Source": "https://www.nasa.gov/mission_pages/themis/news/artemis-orbit.html"
+        },
+        {
+            "Current Official Name of Satellite": "ARTEMIS_P1 (6-year Predict)",
+            "Operator/Owner": "NASA",
+            "Description": "Artemis-P1 was the first unit of the constellation of 2 satellites observing the Magnetosphere frm lunar orbits. It's main mission is to observe space weather and magnetosphere processes.",
+            "Type of Orbit": "Lunar orbit",
+            "Perigee (km)": "323100",
+            "Apogee (km)": "323100",
+            "Period (minutes)": "20880",
+            "Date of Launch": "2/18/2007",
+            "Launch Site": "AIR FORCE EASTERN TEST RANGE (AFETR)",
+            "Source": "https://www.nasa.gov/mission_pages/themis/news/artemis-orbit.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "ARTEMIS_P2",
+            "Operator/Owner": "NASA"
+        },
+        {
+            "Current Official Name of Satellite": "ARTEMIS_P2 (6-year Predict)"
+        },
+        {
+            "Current Official Name of Satellite": "ASTRID II",
+            "Operator/Owner": "Swedish National Space Board",
+            "Description": "Astrid-2 was Sweden's second microsatellite and it was piggybacked with Nadezhda 5, a Russian navigation satellite on December 10, 1998 on a Kosmos-3M rocket from Plesetsk in Russia.\nIts payload, built by the Swedish Institute of Space Physics in Kiruna and Uppsala and the Royal Institute of Technology (Alfven Laboratory) in Stockholm, was EMMA (Electrical and Magnetic field Monitoring of the Aurora), LINDA (Langmuir INterferometer and Density experiment for Astrid-2), MEDUSA (Miniaturized Electrostatic DUal-tophat Spherical Analyzer) and PIA (Photometers for Imaging the Aurora). It was used to explore the electric and magnetic fields in the upper ionosphere and to measure neutral and charged particles and electron density. On July 24, 1999, the contact with the satellite was lost. During its 7 and a half months in space, Astrid-2 delivered a large amount of information to researchers.",
+            "Type of Orbit": "Geocentric orbit",
+            "Perigee (km)": "968",
+            "Apogee (km)": "1014",
+            "Period (minutes)": "105",
+            "Date of Launch": "12/10/1998",
+            "Launch Site": "Plestsk, Russia",
+            "Source": "https://en.wikipedia.org/wiki/Astrid_(satellite)",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Aura",
+            "Operator/Owner": "NASA",
+            "Description": "Aura (Latin for breeze) obtains measurements of ozone, aerosols and key gases throughout the atmosphere using technologically innovative space instrumentation. Scientists use these data to gain revolutionary insights into the chemistry of our atmosphere.",
+            "Type of Orbit": "Sun-synchronous orbit",
+            "Perigee (km)": "708",
+            "Apogee (km)": "710",
+            "Period (minutes)": "98.83",
+            "Date of Launch": "7/15/2004",
+            "Launch Site": "Vandenburg SLC-2W",
+            "Source": "https://aura.gsfc.nasa.gov/about.html"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1A"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1B"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1C"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1D"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1G"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1H"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1I"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1J"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1K"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1M"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1O"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1Q"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1R"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1S"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1T"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1U"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-1V"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2A"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2B"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2C"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2D"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2E"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2F"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2I"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2K"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2L"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2M"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2N"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2O"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2P"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2Q"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2T"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2W"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2X"
+        },
+        {
+            "Current Official Name of Satellite": "BARREL-2Y"
+        },
+        {
+            "Current Official Name of Satellite": "BepiColombo",
+            "Operator/Owner": "Eurpoean Space Agency(ESA) and the Japan Aerospace Exploration Agency (JAXA)",
+            "Description": "BepiColombo is Europe's first mission to Mercury. Launched on 20 October 2018, it is on a seven year journey to the smallest and least explored terrestrial planet in our Solar System. When it arrives at Mercury in late 2025, it will endure temperatures in excess of 350 °C and gather data during its one-year nominal mission, with a possible one-year extension.",
+            "Type of Orbit": "Mercury Planetary Orbiter (inner orbit) and the Mercury Magnetospheric Orbiter (outer orbit)",
+            "Perigee (km)": "5000",
+            "Apogee (km)": "300000",
+            "Period (minutes)": "558",
+            "Date of Launch": "10/20/2018",
+            "Launch Site": "Guiana Space Centre, Kourou, French Guiana",
+            "Source": "https://solarsystem.nasa.gov/missions/bepicolombo/in-depth/"
+        },
+        {
+            "Current Official Name of Satellite": "CALIPSO",
+            "Operator/Owner": "Cannes Mandelieu Center",
+            "Description": "CALIPSO is a joint NASA and CNES environmental satellite, built in the Cannes Mandelieu Space Center, which was launched atop a Delta II rocket on April 28, 2006. Its name stands for Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations.",
+            "Type of Orbit": "polar orbit",
+            "Perigee (km)": "701",
+            "Apogee (km)": "703",
+            "Period (minutes)": "96",
+            "Date of Launch": "4/28/2006",
+            "Launch Site": "Vandenberg Air Force Base, California",
+            "Source": "https://www.nasa.gov/mission_pages/calipso/launch/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "CASSIOPE",
+            "Operator/Owner": "University of Calgary",
+            "Description": "The CASSIOPE Mission will carry the experimental Cascade payload to demonstrate the world's first commercial space-based digital courier service. When proven, future operational missions will provide a large-scale data transfer service to remote commercial, civil and military clients anywhere in the world. Similar to the operations of a traditional courier company, Cascade will pick-up a parcel at close of business day, and deliver it to geographically dispersed destinations before work starts the next day. The difference is that the service will utilize a small satellite and the packages will be very large digital data files.",
+            "Type of Orbit": "elliptical polar orbit",
+            "Perigee (km)": "330",
+            "Apogee (km)": "1408",
+            "Period (minutes)": "102",
+            "Date of Launch": "9/29/2013",
+            "Launch Site": "Vandenberg Air Force Base",
+            "Source": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-055A"
+        },
+        {
+            "Current Official Name of Satellite": "CCE (AMPTE/CCE)",
+            "Operator/Owner": "NASA",
+            "Description": "The CCE (Charge Composition Explorer) spacecraft was instrumented to detect those lithium and barium tracer ions from the IRM released that were transported into the magnetosphere within the CCE orbit. The spacecraft was spin-stabilized at 10 rpm, with its spin axis in the equatorial plane, and offset from the earth-sun line by about 20 degrees. It could adjust attitude with both magnetic torqueing and cold gas thrusters. Five instruments were mounted on the CCE spacecraft",
+            "Type of Orbit": "equatorial orbit",
+            "Perigee (km)": "993.5",
+            "Apogee (km)": "49802.1",
+            "Period (minutes)": "960",
+            "Date of Launch": "8/16/1984",
+            "Launch Site": "Cape Canaveral LC-17A",
+            "Source": "https://space.skyrocket.de/doc_sdat/explorer_cce.htm",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "CHAMP",
+            "Operator/Owner": "Helmholtz-Zentrum Potsdam",
+            "Description": "CHAMP (CHAllenging Minisatellite Payload) is a German small satellite mission for geoscientific and atmospheric research and applications, managed by GeoForschungsZentrum (GFZ). The payload includes an accelerometer, magnetometers, a GPS receiver, a laser retro reflector, and an ion drift meter. With its orbit characteristics (near polar, low altitude, long duration) CHAMP will generate for the first time simultaneously highly precise gravity and magnetic field measurements over a 5 years period. This will allow to detect besides the spatial variations of both fields also their variability with time.",
+            "Type of Orbit": "polar orbit",
+            "Perigee (km)": "418",
+            "Apogee (km)": "474",
+            "Period (minutes)": "96",
+            "Date of Launch": "7/15/2000",
+            "Launch Site": "Plesetsk, Russia",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/c-missions/champ",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Chandra",
+            "Operator/Owner": "NASA",
+            "Description": "The Chandra X-ray Observatory is part of NASA's ﬂeet of \"Great Observatories\" along with the Hubble Space Telescope, the Spitizer Space Telescope and the now deorbited Compton Gamma Ray Observatory. Chandra allows scientists from around the world to obtain X-ray images of exotic environments to help understand the structure and evolution of the universe.",
+            "Type of Orbit": "elliptical orbit",
+            "Perigee (km)": "10,000",
+            "Apogee (km)": "140000",
+            "Period (minutes)": "3840",
+            "Date of Launch": "July 23, 1999",
+            "Launch Site": "Cape Canaveral Air Force Station",
+            "Source": "https://www.nasa.gov/mission_pages/chandra/astronomy/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "Chibis-M",
+            "Operator/Owner": "Russian Space Research Institute",
+            "Description": "The objective of the mission is to study the interrelation of the transient plasma-wave processes connected with the manifestation in the ionosphere of solar-magnetosphere-ionosphere-atmosphere connections and the parameters of space weather. The fundamental goal is the search for universal laws governing transformation and dissipation of plasma-wave energy in the magnetosphere-ionosphere system.",
+            "Type of Orbit": "low Earth orbit",
+            "Perigee (km)": "497",
+            "Apogee (km)": "513",
+            "Period (minutes)": "94",
+            "Date of Launch": "January 25, 2012",
+            "Launch Site": "Baikonur",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/c-missions/chibis-m",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Cloudsat",
+            "Operator/Owner": "NASA",
+            "Description": "CloudSat is in the process of providing, from space, the first global survey of cloud profiles and cloud physical properties, with seasonal and geographical variations, needed to evaluate the way clouds are parameterized in global models, thereby contributing to improved predictions of weather, climate and the cloud-climate feedback problem. CloudSat measures the vertical structure of clouds and precipitation from space primarily through 94 GHz radar reflectivity measurements, but also by using a combination of observations from the A-Train.",
+            "Type of Orbit": "sun-synchronous orbit ",
+            "Perigee (km)": "709",
+            "Apogee (km)": "710",
+            "Period (minutes)": "96",
+            "Date of Launch": "April 28, 2006",
+            "Launch Site": "Vandenberg Air Force Base",
+            "Source": "https://cloudsat.atmos.colostate.edu/education/satellites"
+        },
+        {
+            "Current Official Name of Satellite": "Cluster-1 (FM5/Rumba)"
+        },
+        {
+            "Current Official Name of Satellite": "Cluster-2 (FM6/Salsa)"
+        },
+        {
+            "Current Official Name of Satellite": "Cluster-3 (FM7/Samba)"
+        },
+        {
+            "Current Official Name of Satellite": "Cluster-4 (FM8/Tango)"
+        },
+        {
+            "Current Official Name of Satellite": "C/NOFS"
+        },
+        {
+            "Current Official Name of Satellite": "CRRES"
+        },
+        {
+            "Current Official Name of Satellite": "CSSWE"
+        },
+        {
+            "Current Official Name of Satellite": "Dawn"
+        },
+        {
+            "Current Official Name of Satellite": "DE-1"
+        },
+        {
+            "Current Official Name of Satellite": "DE-2"
+        },
+        {
+            "Current Official Name of Satellite": "DEMETER"
+        },
+        {
+            "Current Official Name of Satellite": "DME-A"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-06",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-07",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-08",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-09",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-10",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-11",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-12",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-13",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-14",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-15",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-16",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-17",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-18",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "DMSP-19",
+            "Operator/Owner": "Space and Missile Systems Center",
+            "Description": "Since the mid-1960's, when the Department of Defense (DoD) initiated the Defense Meteorological Satellite Program (DMSP), low, earth-orbiting satellites have provided the military with important environmental information. Each DMSP satellite has a 101 minute orbit and provides global coverage twice per day.\n\nThe DMSP satellites \"see\" such environmental features as clouds, bodies of water, snow, fire, and pollution in the visual and infrared spectra. Scanning radiometers record information which can help determine cloud type and height, land and surface water temperatures, water currents, ocean surface features, ice, and snow. Communicated to ground-based terminals, the data is processed, interpreted by meteorologists, and ultimately used in planning and conducting U.S. military operations worldwide.",
+            "Type of Orbit": "Sun-synchronous orbit"
+        },
+        {
+            "Current Official Name of Satellite": "Double Star-1",
+            "Operator/Owner": "CNSA, ESA",
+            "Description": "The Double Star spacecraft, called also Tan Ce (TC) which in Chinese means ‘Probe‘, is a joint Chinese and ESA mission to study the effect of the Sun on the Earth's environment. The polar spacecraft (TC-2) will monitor the energy input from the solar wind into the polar ionosphere. The equatorial spacecraft (TC-1) will investigate the so-called substorm process, when it is in the Earth's magnetotail, and the entry of solar particle on the front side of the magnetosphere.",
+            "Type of Orbit": "Circular Orbit",
+            "Perigee (km)": "500",
+            "Apogee (km)": "500",
+            "Period (minutes)": "702",
+            "Date of Launch": "7/25/2004",
+            "Launch Site": "Xichang Satellite Launch Center",
+            "Source": "https://web.archive.org/web/20050910223915/http://www.esa.int/esaSC/120381_index_0_m.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Double Star-2",
+            "Operator/Owner": "CNSA, ESA",
+            "Description": "The Double Star spacecraft, called also Tan Ce (TC) which in Chinese means ‘Probe‘, is a joint Chinese and ESA mission to study the effect of the Sun on the Earth's environment. The polar spacecraft (TC-2) will monitor the energy input from the solar wind into the polar ionosphere. The equatorial spacecraft (TC-1) will investigate the so-called substorm process, when it is in the Earth's magnetotail, and the entry of solar particle on the front side of the magnetosphere.",
+            "Type of Orbit": "Circular Orbit",
+            "Perigee (km)": "666",
+            "Apogee (km)": "666",
+            "Period (minutes)": "702",
+            "Date of Launch": "7/25/2004",
+            "Launch Site": "Xichang Satellite Launch Center",
+            "Source": "https://web.archive.org/web/20050910223915/http://www.esa.int/esaSC/120381_index_0_m.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "DSCOVR"
+        },
+        {
+            "Current Official Name of Satellite": "ELFIN-A"
+        },
+        {
+            "Current Official Name of Satellite": "ELFIN-B"
+        },
+        {
+            "Current Official Name of Satellite": "Equator-S"
+        },
+        {
+            "Current Official Name of Satellite": "Explorer-45"
+        },
+        {
+            "Current Official Name of Satellite": "FAST"
+        },
+        {
+            "Current Official Name of Satellite": "FIREBIRD 3"
+        },
+        {
+            "Current Official Name of Satellite": "FIREBIRD 4"
+        },
+        {
+            "Current Official Name of Satellite": "Freja"
+        },
+        {
+            "Current Official Name of Satellite": "GCOM-W1"
+        },
+        {
+            "Current Official Name of Satellite": "Genesis"
+        },
+        {
+            "Current Official Name of Satellite": "Geotail"
+        },
+        {
+            "Current Official Name of Satellite": "Geotail (2-year Predict)"
+        },
+        {
+            "Current Official Name of Satellite": "GMS-3"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-10"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-11"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-12"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-13"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-14"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-15"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-16"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-17"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-6"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-7"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-8"
+        },
+        {
+            "Current Official Name of Satellite": "GOES-9"
+        },
+        {
+            "Current Official Name of Satellite": "GOLD"
+        },
+        {
+            "Current Official Name of Satellite": "GOLD (Conceptual)"
+        },
+        {
+            "Current Official Name of Satellite": "GOSAT"
+        },
+        {
+            "Current Official Name of Satellite": "GRACE-1"
+        },
+        {
+            "Current Official Name of Satellite": "GRACE-2"
+        },
+        {
+            "Current Official Name of Satellite": "GRACE-FO1"
+        },
+        {
+            "Current Official Name of Satellite": "GRACE-FO2"
+        },
+        {
+            "Current Official Name of Satellite": "Hawkeye"
+        },
+        {
+            "Current Official Name of Satellite": "Hinode"
+        },
+        {
+            "Current Official Name of Satellite": "ICON"
+        },
+        {
+            "Current Official Name of Satellite": "IMAGE"
+        },
+        {
+            "Current Official Name of Satellite": "IMP-7"
+        },
+        {
+            "Current Official Name of Satellite": "IMP-8"
+        },
+        {
+            "Current Official Name of Satellite": "Interball-2 (Auroral Probe)"
+        },
+        {
+            "Current Official Name of Satellite": "Interball-1 (Tail)"
+        },
+        {
+            "Current Official Name of Satellite": "IRM (AMPTE/IRM)"
+        },
+        {
+            "Current Official Name of Satellite": "ISEE-1"
+        },
+        {
+            "Current Official Name of Satellite": "ISEE-2"
+        },
+        {
+            "Current Official Name of Satellite": "ISEE-3"
+        },
+        {
+            "Current Official Name of Satellite": "ISIS-1"
+        },
+        {
+            "Current Official Name of Satellite": "ISIS-2"
+        },
+        {
+            "Current Official Name of Satellite": "ISS"
+        },
+        {
+            "Current Official Name of Satellite": "ISS-b"
+        },
+        {
+            "Current Official Name of Satellite": "JASON2"
+        },
+        {
+            "Current Official Name of Satellite": "Juno"
+        },
+        {
+            "Current Official Name of Satellite": "Kepler"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-01"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-02"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-89"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-90"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-91"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-94"
+        },
+        {
+            "Current Official Name of Satellite": "LANL-97"
+        },
+        {
+            "Current Official Name of Satellite": "LRO"
+        },
+        {
+            "Current Official Name of Satellite": "Mars"
+        },
+        {
+            "Current Official Name of Satellite": "MAVEN"
+        },
+        {
+            "Current Official Name of Satellite": "Mercury"
+        },
+        {
+            "Current Official Name of Satellite": "MESSENGER"
+        },
+        {
+            "Current Official Name of Satellite": "MetOp-B (MetOp-1)"
+        },
+        {
+            "Current Official Name of Satellite": "MetOp-A (MetOp-2)"
+        },
+        {
+            "Current Official Name of Satellite": "Microlab1"
+        },
+        {
+            "Current Official Name of Satellite": "MIR"
+        },
+        {
+            "Current Official Name of Satellite": "MMS 1"
+        },
+        {
+            "Current Official Name of Satellite": "MMS 1 (5-year Predict)"
+        },
+        {
+            "Current Official Name of Satellite": "MMS 2"
+        },
+        {
+            "Current Official Name of Satellite": "MMS 3"
+        },
+        {
+            "Current Official Name of Satellite": "MMS 4"
+        },
+        {
+            "Current Official Name of Satellite": "Moon"
+        },
+        {
+            "Current Official Name of Satellite": "MRO"
+        },
+        {
+            "Current Official Name of Satellite": "MSX"
+        },
+        {
+            "Current Official Name of Satellite": "New Horizons"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-10"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-12"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-14"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-15"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-16"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-17"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-18"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-19"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-20"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-5"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-6"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-7"
+        },
+        {
+            "Current Official Name of Satellite": "NOAA-8"
+        },
+        {
+            "Current Official Name of Satellite": "Oersted"
+        },
+        {
+            "Current Official Name of Satellite": "OGO-5"
+        },
+        {
+            "Current Official Name of Satellite": "OGO-6"
+        },
+        {
+            "Current Official Name of Satellite": "Ohzora"
+        },
+        {
+            "Current Official Name of Satellite": "PARASOL"
+        },
+        {
+            "Current Official Name of Satellite": "Parker Solar Probe"
+        },
+        {
+            "Current Official Name of Satellite": "Parker Solar Probe (Predict)"
+        },
+        {
+            "Current Official Name of Satellite": "Polar"
+        },
+        {
+            "Current Official Name of Satellite": "RBSP-A"
+        },
+        {
+            "Current Official Name of Satellite": "RBSP-A (1-year Predict)"
+        },
+        {
+            "Current Official Name of Satellite": "RBSP-B"
+        },
+        {
+            "Current Official Name of Satellite": "RBSP-B (1-year Predict)"
+        },
+        {
+            "Current Official Name of Satellite": "Reimei"
+        },
+        {
+            "Current Official Name of Satellite": "RHESSI"
+        },
+        {
+            "Current Official Name of Satellite": "ROCSAT1"
+        },
+        {
+            "Current Official Name of Satellite": "Rosetta"
+        },
+        {
+            "Current Official Name of Satellite": "SAMPEX",
+            "Operator/Owner": "NASA",
+            "Description": "NASA's very first small explorer, the Solar, Anomalous, and Magnetospheric Particle Explorer or SAMPEX, was launched July 3, 1992 to study the zoo of particles and cosmic rays surrounding Earth. Surviving much longer than its expected mission of three years and providing invaluable observations for those who study space weather, the SAMPEX mission is now almost over. In early November, the spacecraft's orbit will decay enough that it will re-enter Earth's atmosphere, burning up completely on re-entry.",
+            "Type of Orbit": "Polar Orbit",
+            "Perigee (km)": "520",
+            "Apogee (km)": "670",
+            "Period (minutes)": "96",
+            "Date of Launch": "7/3/1992",
+            "Launch Site": "Vandenberg Air Force Base",
+            "Source": "https://www.nasa.gov/mission_pages/sunearth/news/sampex-deorbit.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "SCATHA",
+            "Operator/Owner": "US Air Force STP",
+            "Description": "Spacecraft Charging At High Altitudes (SCATHA) was a spacecraft program for measuring the characteristics of the plasmasheath charging process. This program determined the response of the spacecraft to the charging and evaluated the techniques to correct the problem. The spacecraft was essentially a right circular cylinder, 1.7 m in diameter and 1.8 m high. It had a near-synchronous orbit and spun about the cylinder axis at a rate of 1 rpm. The spin vector was normal to the earth-sun line and in the equatorial plane of the earth. There were three 3-m booms, a 2-m, and a 7-m boom, all for deployment of experiments. In addition, there was a 101.7-m tip-to-tip electric field antenna. An electron gun and a positive ion (xenon) gun were included, to test the control of the spacecraft potential. Telemetry capability was both PCM and FM, and data could be stored up to 12 h using onboard tape recorders. The planned mission lifetime of 1 year has been surpassed.",
+            "Type of Orbit": "quasi-stationary orbit",
+            "Perigee (km)": "28000",
+            "Apogee (km)": "42000",
+            "Period (minutes)": "N/A",
+            "Date of Launch": "1/30/1979",
+            "Launch Site": "Cape Canaveral",
+            "Source": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-007A",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "SDO",
+            "Operator/Owner": "NASA",
+            "Description": "The Solar Dynamics Observatory is the first mission to be launched for NASA's Living With a Star (LWS) Program, a program designed to understand the causes of solar variability and its impacts on Earth. SDO is designed to help us understand the Sun's influence on Earth and Near-Earth space by studying the solar atmosphere on small scales of space and time and in many wavelengths simultaneously.\r\n\r\nSDO's goal is to understand, driving towards a predictive capability, the solar variations that influence life on Earth and humanity's technological systems by determining how the Sun's magnetic field is generated and structured, how this stored magnetic energy is converted and released into the heliosphere and geospace in the form of solar wind, energetic particles, and variations in the solar irradiance.",
+            "Type of Orbit": "inclined geosynchronous orbit",
+            "Perigee (km)": "36000",
+            "Apogee (km)": "36000",
+            "Period (minutes)": "1440",
+            "Date of Launch": "2/11/10",
+            "Launch Site": "CCAFS Space Launch Complex 41",
+            "Source": "https://sdo.gsfc.nasa.gov/mission/"
+        },
+        {
+            "Current Official Name of Satellite": "SMILE (Concept)",
+            "Operator/Owner": "ESA/CAS",
+            "Description": "The Solar wind Magnetosphere Ionosphere Link Explorer, or SMILE, is a joint mission between the European Space Agency (ESA) and the Chinese Academy of Sciences (CAS). SMILE aims to build a more complete understanding of the Sun-Earth connection by measuring the solar wind and its dynamic interaction with the magnetosphere.",
+            "Type of Orbit": "elliptical orbit",
+            "Perigee (km)": "5000",
+            "Apogee (km)": "5000",
+            "Period (minutes)": "3120",
+            "Date of Launch": "??/??/2024",
+            "Launch Site": "Kourou",
+            "Source": "https://sci.esa.int/web/smile",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "SNOE",
+            "Operator/Owner": "NASA/LASP",
+            "Description": "The Student Nitric Oxide Explorer (SNOE) project was the first satellite to be launched in NASA's Student Explorer Demonstration Initiative (STEDI) program. STEDI, managed for NASA by USRA, is a pilot program to demonstrate that high-quality space science can be carried out with small, low-cost (<$4.4 million) free-flying satellites on a time scale of two years from go-ahead to launch. The scientific objectives of the Student Nitric Oxide Explorer were a detailed study of variations in nitric oxide (NO) in the Earth thermosphere. NO is an important minor constituent that strongly affects the ion composition of the ionosphere and the thermal structure of the thermosphere. Specific objectives were to: (1) determine how variations in the solar soft X-radiation produce changes in the density of nitric oxide in the lower thermosphere; and, (2) determine how auroral activity produces increased nitric oxide in the polar regions.\r\n\r\nThe spacecraft was a compact hexagonal structure, approximately 0.9 m high and 1 m across it widest dimension, weighing a maximum of 100 kg. It was launched into a sun-synchronous circular orbit at 530-580 km altitude and 97.7 degrees inclination. It span at 5 rpm with the spin axis normal to the orbit plane and carried three instruments: an ultraviolet spectrometer to measure nitric oxide altitude profiles, a two-channel auroral photometer to measure auroral emissions beneath the spacecraft, and a five-channel solar soft X-ray photometer. SNOE also carried a GPS receiver for accurate orbit and attitude determination.\r\n\r\nThe SNOE spacecraft and its instrument complement were designed, built, and operated entirely at the Laboratory for Atmospheric and Space Physics (LASP) of the University of Colorado at Boulder.",
+            "Type of Orbit": "sun-synchronous circular orbit",
+            "Perigee (km)": "530",
+            "Apogee (km)": "580",
+            "Period (minutes)": "25444.8",
+            "Date of Launch": "2/26/1998",
+            "Launch Site": "Vandenberg Air Force Base",
+            "Source": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-012A"
+        },
+        {
+            "Current Official Name of Satellite": "SOHO",
+            "Operator/Owner": "NASA/ESA",
+            "Description": "SOHO, the Solar & Heliospheric Observatory, is a project of international collaboration between ESA and NASA to study the Sun from its deep core to the outer corona and the solar wind.\r\n\r\nSOHO was launched on December 2, 1995. The SOHO spacecraft was built in Europe by an industry team led by prime contractor Matra Marconi Space (now EADS Astrium) under overall management by ESA. The twelve instruments on board SOHO were provided by European and American scientists. Nine of the international instrument consortia are led by European Principal Investigators (PI's), three by PI's from the US. Large engineering teams and more than 200 co-investigators from many institutions supported the PI's in the development of the instruments and in the preparation of their operations and data analysis. NASA was responsible for the launch and is now responsible for mission operations. Large radio dishes around the world which form NASA's Deep Space Network are used for data downlink and commanding. Mission control is based at Goddard Space Flight Center in Maryland.",
+            "Perigee (km)": "1500000",
+            "Apogee (km)": "1500000",
+            "Period (minutes)": "256320",
+            "Date of Launch": "12/2/1995",
+            "Launch Site": "Cape Canaveral Launch Complex 36",
+            "Source": "https://sohowww.nascom.nasa.gov/",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "SORCE",
+            "Operator/Owner": "LASP/NASA",
+            "Description": "The Solar Radiation and Climate Experiment (SORCE) was a NASA-sponsored satellite mission that provided state-of-the-art measurements of incoming x-ray, ultraviolet, visible, near-infrared, and total solar radiation. The measurements provided by SORCE specifically addressed long-term climate change, natural variability and enhanced climate prediction, and atmospheric ozone and UV-B radiation.",
+            "Type of Orbit": "Circular orbit",
+            "Perigee (km)": "645",
+            "Apogee (km)": "645",
+            "Period (minutes)": "97.19",
+            "Date of Launch": "1/25/2003",
+            "Launch Site": "Cape Canaveral Air Force Station",
+            "Source": "https://lasp.colorado.edu/home/sorce/mission/launch/"
+        },
+        {
+            "Current Official Name of Satellite": "Spitzer",
+            "Operator/Owner": "NASA",
+            "Description": "The Spitzer Space Telescope is the final mission in NASA's Great Observatories Program - a family of four space-based observatories, each observing the Universe in a different kind of light. The other missions in the program include the visible-light Hubble Space Telescope (HST), Compton Gamma-Ray Observatory (CGRO), and the Chandra X-Ray Observatory (CXO).\n\nSpitzer is designed to detect infrared radiation, which is primarily heat radiation. It is comprised of two major components:\n\nThe Cryogenic Telescope Assembly, which contains the a 85 centimeter telescope and Spitzer's three scientific instruments\n\nThe Spacecraft, which controls the telescope, provides power to the instruments, handles the scientific data and communicates with Earth\n\nIt may seem like a contradiction, but NASA's Spitzer Space Telescope must be simultaneously warm and cold to function properly. Everything in the Cryogenic Telescope Assembly must be cooled to only a few degrees above absolute zero (-459 degrees Fahrenheit, or -273 degrees Celsius). This is achieved with an onboard tank of liquid helium, or cryogen.  Meanwhile, electronic equipment in The Spacecraft portion needs to operate near room temperature.\n\nSpitzer's highly sensitive instruments allow scientists to peer into cosmic regions that are hidden from optical telescopes, including dusty stellar nurseries, the centers of galaxies, and newly forming planetary systems. Spitzer's infrared eyes also allows astronomers see cooler objects in space, like failed stars (brown dwarfs), extrasolar planets, giant molecular clouds, and organic molecules that may hold the secret to life on other planets.\n\nSpitzer was originally built to last for a minimum of 2.5 years, but it lasted in the cold phase for over 5.5 years. On May 15, 2009 the coolant was finally depleted and the Spitzer \"warm mission\" began.  Operating with 2 channels from one of its instruments called IRAC, Spitzer can continue to operate until late in this decade. Check out: Fast Facts and Current Status.",
+            "Type of Orbit": "Earth-trailing orbit",
+            "Perigee (km)": "568",
+            "Apogee (km)": "568",
+            "Period (minutes)": "537408",
+            "Date of Launch": "8/25/2003",
+            "Launch Site": "Cape Canaveral Air Force Station",
+            "Source": "https://www.nasa.gov/mission_pages/spitzer/main/index.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Sputnik 1",
+            "Operator/Owner": "Energia",
+            "Description": "Sputnik 1 was the first artificial Earth satellite. The Soviet Union launched it into an elliptical low Earth orbit on 4 October 1957. It orbited for three weeks before its batteries died and then orbited silently for two months before it fell back into the atmosphere. It was a polished metal sphere 58 cm (23 in) in diameter with four external radio antennas to broadcast radio pulses. Its radio signal was easily detectable by radio amateurs, and the 65° inclination and duration of its orbit made its flight path cover virtually the entire inhabited Earth. The satellite's unanticipated success precipitated the American Sputnik crisis and triggered the Space Race, part of the Cold War. The launch was the beginning of a new era of political, military, technological and scientific developments.The name \"Sputnik\" is Russian for spouse/traveling companion or satellite when interpreted in an astronomical context.",
+            "Type of Orbit": "elliptical orbit",
+            "Perigee (km)": "230",
+            "Apogee (km)": "940",
+            "Period (minutes)": "96",
+            "Date of Launch": "10/4/1957",
+            "Launch Site": "Gagarin's Start",
+            "Source": "https://www.nasa.gov/multimedia/imagegallery/image_feature_924.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "ST5-A",
+            "Operator/Owner": "NASA",
+            "Description": "The ST5 micro-satellites successfully launched on March 22, 2006 aboard an Orbital Sciences Pegasus Rocket from Vandenberg Air Force Base, California. The official launch time was 9:03:45 a.m. EST. NASA's three micro-sats were launched to test and validate new technologies for future science missions.\n\nST5's objective was to demonstrate and flight qualify several innovative technologies and concepts for application to future space missions.\n\nThe ST5 Project is a part of NASA's New Millennium Program, which was created to identify, develop, build, and test innovative technologies and concepts for use in future missions. Its missions are guided by future needs of NASA's Earth and Space Science program.\n\nThere are three satellites in the ST5 mission ST5-A, ST5-B, ST5-C.",
+            "Type of Orbit": "Elliptical sun-synchronous orbit",
+            "Perigee (km)": "100",
+            "Apogee (km)": "1000",
+            "Period (minutes)": "136",
+            "Date of Launch": "3/22/2006",
+            "Launch Site": "Vandenberg AFB",
+            "Source": "https://www.nasa.gov/mission_pages/st-5/main/index.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "ST5-B",
+            "Operator/Owner": "NASA",
+            "Description": "The ST5 micro-satellites successfully launched on March 22, 2006 aboard an Orbital Sciences Pegasus Rocket from Vandenberg Air Force Base, California. The official launch time was 9:03:45 a.m. EST. NASA's three micro-sats were launched to test and validate new technologies for future science missions.\n\nST5's objective was to demonstrate and flight qualify several innovative technologies and concepts for application to future space missions.\n\nThe ST5 Project is a part of NASA's New Millennium Program, which was created to identify, develop, build, and test innovative technologies and concepts for use in future missions. Its missions are guided by future needs of NASA's Earth and Space Science program.\n\nThere are three satellites in the ST5 mission ST5-A, ST5-B, ST5-C.",
+            "Type of Orbit": "Elliptical sun-synchronous orbit",
+            "Perigee (km)": "100",
+            "Apogee (km)": "1000",
+            "Period (minutes)": "136",
+            "Date of Launch": "3/22/2006",
+            "Launch Site": "Vandenberg AFB",
+            "Source": "https://www.nasa.gov/mission_pages/st-5/main/index.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "ST5-C",
+            "Operator/Owner": "NASA",
+            "Description": "The ST5 micro-satellites successfully launched on March 22, 2006 aboard an Orbital Sciences Pegasus Rocket from Vandenberg Air Force Base, California. The official launch time was 9:03:45 a.m. EST. NASA's three micro-sats were launched to test and validate new technologies for future science missions.\n\nST5's objective was to demonstrate and flight qualify several innovative technologies and concepts for application to future space missions.\n\nThe ST5 Project is a part of NASA's New Millennium Program, which was created to identify, develop, build, and test innovative technologies and concepts for use in future missions. Its missions are guided by future needs of NASA's Earth and Space Science program.\n\nThere are three satellites in the ST5 mission ST5-A, ST5-B, ST5-C.",
+            "Type of Orbit": "Elliptical sun-synchronous orbit",
+            "Perigee (km)": "100",
+            "Apogee (km)": "1000",
+            "Period (minutes)": "136",
+            "Date of Launch": "3/22/2006",
+            "Launch Site": "Vandenberg AFB",
+            "Source": "https://www.nasa.gov/mission_pages/st-5/main/index.html",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "STEREO-Ahead",
+            "Operator/Owner": "NASA",
+            "Description": "STEREO (Solar TErrestrial RElations Observatory) is the third mission in NASA's Solar Terrestrial Probes program (STP). It employs two nearly identical space-based observatories - one ahead of Earth in its orbit, the other trailing behind - to provide the first-ever stereoscopic measurements to study the Sun and the nature of its coronal mass ejections, or CMEs.\n\nStereo Scientific Objectives are to understand the causes and mechanisms of coronal mass ejection (CME) initiation, characterize the propagation of CMEs through the heliosphere, and discover the mechanisms and sites of energetic particle acceleration in the low corona and the interplanetary medium, improve the determination of the structure of the ambient solar wind.\n\nThere are two satellites in the STEREO mission, STEREO-Ahead, and STEREO-BACK",
+            "Type of Orbit": "N/A",
+            "Perigee (km)": "6544458",
+            "Apogee (km)": "6544458",
+            "Period (minutes)": "498240",
+            "Date of Launch": "10/25/2006",
+            "Launch Site": "Cape Canaveral Air Force Station",
+            "Source": "https://stereo.gsfc.nasa.gov/mission/mission.shtml"
+        },
+        {
+            "Current Official Name of Satellite": "STEREO-Behind",
+            "Operator/Owner": "NASA",
+            "Description": "STEREO (Solar TErrestrial RElations Observatory) is the third mission in NASA's Solar Terrestrial Probes program (STP). It employs two nearly identical space-based observatories - one ahead of Earth in its orbit, the other trailing behind - to provide the first-ever stereoscopic measurements to study the Sun and the nature of its coronal mass ejections, or CMEs.\n\nStereo Scientific Objectives are to understand the causes and mechanisms of coronal mass ejection (CME) initiation, characterize the propagation of CMEs through the heliosphere, and discover the mechanisms and sites of energetic particle acceleration in the low corona and the interplanetary medium, improve the determination of the structure of the ambient solar wind.\n\nThere are two satellites in the STEREO mission, STEREO-Ahead, and STEREO-BACK.",
+            "Type of Orbit": "N/A",
+            "Perigee (km)": "2410620",
+            "Apogee (km)": "2410620",
+            "Period (minutes)": "558720",
+            "Date of Launch": "10/25/2006",
+            "Launch Site": "Cape Canaveral Air Force Station",
+            "Source": "https://stereo.gsfc.nasa.gov/mission/mission.shtml"
+        },
+        {
+            "Current Official Name of Satellite": "Suomi NPP",
+            "Operator/Owner": "NASA",
+            "Description": "Suomi NPP — the National Polar-orbiting Partnership mission -- is the first of a new generation of satellites that will observe many facets of our changing Earth, collecting critical data to improve our understanding of long-term climate change and short-term weather conditions. With Suomi NPP, NASA continues many key data records initiated by the agency's Earth Observing System satellites, monitoring changes occurring in the atmosphere, oceans, vegetation, ice and solid Earth.",
+            "Type of Orbit": "sun-synchronous orbit",
+            "Perigee (km)": "823",
+            "Apogee (km)": "823",
+            "Period (minutes)": "102",
+            "Date of Launch": "10/28/2011",
+            "Launch Site": "        Vandenberg SLC-2W",
+            "Source": "https://www.nasa.gov/mission_pages/NPP/main/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "Swarm A",
+            "Operator/Owner": "ESA",
+            "Description": "Swarm is a minisatellite constellation mission within the Earth Explorer Opportunity Program of ESA, proposed under the lead of DNSC (Danish National Space Center) of Copenhagen, Denmark (formerly DSRI). In January 2007, DNSC became DTU Space, an institute at the Technical University of Denmark. The Swarm mission will be the 4th mission in ESA's Earth Explorer Program, following GOCE, SMOS, and CryoSat-2.\n\nThe first mission to ever map the Earth's magnetic field vector at LEO was the NASA MagSat spacecraft (launch Oct. 30 1979). Due to the low perigee (perigee=350 km, apogee=551 km), MagSat remained in orbit for only seven and a half months until June 11, 1980. About 20 years later, the Danish Ørsted micro satellite (1999-), the German CHAMP (2000-), the Argentine SAC-C (2000-) have been designed specifically for mapping the LEO magnetic field. Common to these recent missions is the magnetometry package, which utilizes a vector field magnetometer co-mounted with a star tracker (2 in the case of CHAMP) on an optical bench. As the accuracy of the instrument package has constantly increased, as well as the modelling methods have been improved towards optimized signal decomposition, it has been realized that simultaneous data from several points in space is needed, if the ultimate modelling barrier, the spatial-temporal ambiguity, has to be broken.\n\nThe overall objective of the Swarm mission is to build on the Ørsted and CHAMP mission experiences and to provide the best ever survey of the geomagnetic field (multi-point measurements) and its temporal evolution, to gain new insights into the Earth system by improving our understanding of the Earth's interior and climate.",
+            "Type of Orbit": "Polar Orbit",
+            "Perigee (km)": "450",
+            "Apogee (km)": "450",
+            "Period (minutes)": "96",
+            "Date of Launch": "11/22/2013",
+            "Launch Site": "Kosmodrom Plesetsk",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/s/swarm#orbits"
+        },
+        {
+            "Current Official Name of Satellite": "Swarm B",
+            "Operator/Owner": "ESA",
+            "Description": "Swarm is a minisatellite constellation mission within the Earth Explorer Opportunity Program of ESA, proposed under the lead of DNSC (Danish National Space Center) of Copenhagen, Denmark (formerly DSRI). In January 2007, DNSC became DTU Space, an institute at the Technical University of Denmark. The Swarm mission will be the 4th mission in ESA's Earth Explorer Program, following GOCE, SMOS, and CryoSat-2.\n\nThe first mission to ever map the Earth's magnetic field vector at LEO was the NASA MagSat spacecraft (launch Oct. 30 1979). Due to the low perigee (perigee=350 km, apogee=551 km), MagSat remained in orbit for only seven and a half months until June 11, 1980. About 20 years later, the Danish Ørsted micro satellite (1999-), the German CHAMP (2000-), the Argentine SAC-C (2000-) have been designed specifically for mapping the LEO magnetic field. Common to these recent missions is the magnetometry package, which utilizes a vector field magnetometer co-mounted with a star tracker (2 in the case of CHAMP) on an optical bench. As the accuracy of the instrument package has constantly increased, as well as the modelling methods have been improved towards optimized signal decomposition, it has been realized that simultaneous data from several points in space is needed, if the ultimate modelling barrier, the spatial-temporal ambiguity, has to be broken.\n\nThe overall objective of the Swarm mission is to build on the Ørsted and CHAMP mission experiences and to provide the best ever survey of the geomagnetic field (multi-point measurements) and its temporal evolution, to gain new insights into the Earth system by improving our understanding of the Earth's interior and climate.",
+            "Type of Orbit": "Polar Orbit",
+            "Perigee (km)": "450",
+            "Apogee (km)": "450",
+            "Period (minutes)": "96",
+            "Date of Launch": "11/22/2013",
+            "Launch Site": "Kosmodrom Plesetsk",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/s/swarm#orbits"
+        },
+        {
+            "Current Official Name of Satellite": "Swarm C",
+            "Operator/Owner": "ESA",
+            "Description": "Swarm is a minisatellite constellation mission within the Earth Explorer Opportunity Program of ESA, proposed under the lead of DNSC (Danish National Space Center) of Copenhagen, Denmark (formerly DSRI). In January 2007, DNSC became DTU Space, an institute at the Technical University of Denmark. The Swarm mission will be the 4th mission in ESA's Earth Explorer Program, following GOCE, SMOS, and CryoSat-2.\n\nThe first mission to ever map the Earth's magnetic field vector at LEO was the NASA MagSat spacecraft (launch Oct. 30 1979). Due to the low perigee (perigee=350 km, apogee=551 km), MagSat remained in orbit for only seven and a half months until June 11, 1980. About 20 years later, the Danish Ørsted micro satellite (1999-), the German CHAMP (2000-), the Argentine SAC-C (2000-) have been designed specifically for mapping the LEO magnetic field. Common to these recent missions is the magnetometry package, which utilizes a vector field magnetometer co-mounted with a star tracker (2 in the case of CHAMP) on an optical bench. As the accuracy of the instrument package has constantly increased, as well as the modelling methods have been improved towards optimized signal decomposition, it has been realized that simultaneous data from several points in space is needed, if the ultimate modelling barrier, the spatial-temporal ambiguity, has to be broken.\n\nThe overall objective of the Swarm mission is to build on the Ørsted and CHAMP mission experiences and to provide the best ever survey of the geomagnetic field (multi-point measurements) and its temporal evolution, to gain new insights into the Earth system by improving our understanding of the Earth's interior and climate.",
+            "Type of Orbit": "Polar Orbit",
+            "Perigee (km)": "530",
+            "Apogee (km)": "530",
+            "Period (minutes)": "96",
+            "Date of Launch": "11/22/2013",
+            "Launch Site": "Kosmodrom Plesetsk",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/s/swarm#orbits"
+        },
+        {
+            "Current Official Name of Satellite": "Tatiana2",
+            "Operator/Owner": "MSU",
+            "Description": "Tatiana-2 (also spelling of Tatyana-2; Tatiana-2 is also known as Universitetsky-2) is a cooperative international microsatellite science mission of the D. V. Skobeltsyn Institute of Nuclear Physics (SINP) at the Lomonosov Moscow State University (MSU), Moscow, Russia. The overall objective is the measurement of TLEs (Transient Luminous Events) in Earth's atmosphere. The goal is to observe simultaneously TLE and NUV (Near-Ultraviolet) emission profiles in high temporal resolution (ms) in a wide spectrum of 8 bands.",
+            "Type of Orbit": "Circular orbit",
+            "Perigee (km)": "820",
+            "Apogee (km)": "827",
+            "Period (minutes)": "101",
+            "Date of Launch": "9/17/2009",
+            "Launch Site": "Baikonur 31/6",
+            "Source": "https://earth.esa.int/web/eoportal/satellite-missions/t/tatiana-2",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-A (P5)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-A (8-year Predict)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-B (P1)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-B (6-year Predict)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-C (P2)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-C (6-year Predict)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-D (P3)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-D (8-year Predict)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-E (P4)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "THEMIS-E (8-year Predict)",
+            "Operator/Owner": "NASA",
+            "Description": "The Time History of Events and Macroscale Interactions during Substorms —THEMIS — mission studies how mass and energy move through the near-Earth space environment in order to determine the details of what initiates the dancing lights of auroras near the poles. Prior to the THEMIS launch in 2007, scientists knew that auroras were caused by a space weather phenomenon known as a substorm — but not what initiated the substorms themselves. With THEMIS’s help, we now have a much better understanding of this space weather phenomenon, which can help us predict and mitigate space weather effects near Earth — including helping to ensure safety for astronauts and spacecraft operating around Earth",
+            "Type of Orbit": "toroidal",
+            "Perigee (km)": "470",
+            "Apogee (km)": "87330",
+            "Period (minutes)": "1870",
+            "Date of Launch": "2/17/2007",
+            "Launch Site": "\tCape Canaveral SLC-17B",
+            "Source": "https://www.nasa.gov/mission_pages/themis/mission/index.html"
+        },
+        {
+            "Current Official Name of Satellite": "TIMED",
+            "Operator/Owner": "NASA",
+            "Description": "The TIMED (Thermosphere Ionosphere Mesosphere Energetics and Dynamics) is an orbiter mission dedicated to study the dynamics of the Mesosphere and Lower Thermosphere (MLT) portion of the Earth's atmosphere. The mission was launched from Vandenberg Air Force Base in California on December 7, 2001 aboard a Delta II rocket launch vehicle. The project is sponsored and managed by NASA, while the spacecraft was designed and assembled by the Applied Physics Laboratory at Johns Hopkins University. The mission has been extended several times, and has now collected data over an entire solar cycle, which helps in its goal to differentiate the Sun's effects on the atmosphere from other effects.[1]",
+            "Type of Orbit": "Circular orbit",
+            "Perigee (km)": "611",
+            "Apogee (km)": "612",
+            "Period (minutes)": "97",
+            "Date of Launch": "12/7/2001",
+            "Launch Site": "Vandenberg",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/t/timed"
+        },
+        {
+            "Current Official Name of Satellite": "TRACE",
+            "Operator/Owner": "NASA",
+            "Description": "Transition Region and Coronal Explorer (TRACE) was a NASA heliophysics and solar observatory designed to investigate the connections between fine-scale magnetic fields and the associated plasma structures on the Sun by providing high resolution images and observation of the solar photosphere, the transition region, and the corona. A main focus of the TRACE instrument is the fine structure of coronal loops low in the solar atmosphere. TRACE is the fourth spacecraft in the Small Explorer program, launched on April 2, 1998, and obtained its last science image on 21 June 2010 23:56 UT",
+            "Type of Orbit": "Sun synchronus",
+            "Perigee (km)": "517",
+            "Apogee (km)": "554",
+            "Period (minutes)": "95",
+            "Date of Launch": "04-01-1998",
+            "Launch Site": "Stargazer, Vandenburg AFB",
+            "Source": "https://science.nasa.gov/missions/trace",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Twins1",
+            "Operator/Owner": "NASA",
+            "Description": "TWINS is a collaborative Sun-Earth connection two-satellite mission of NASA, LANL (Los Alamos National Laboratory), JHU/APL, SwRI (Southwest Research Institute), USC (University of Southern California), WVU (West Virginia University), The Aerospace Corporation, and the University of Bonn, Germany. TWINS is part of the NASA SMEX (Small Explorer) program. David J. McComas of SwRI is the PI (Principal Investigator) of the TWINS missions.",
+            "Type of Orbit": "Molniya orbit",
+            "Perigee (km)": "1100",
+            "Apogee (km)": "46000",
+            "Period (minutes)": "720",
+            "Date of Launch": "6-28-2008",
+            "Launch Site": "VAFB",
+            "Source": "https://earth.esa.int/web/eoportal/satellite-missions/t/twins"
+        },
+        {
+            "Current Official Name of Satellite": "Twins2",
+            "Operator/Owner": "NASA",
+            "Description": "TWINS is a collaborative Sun-Earth connection two-satellite mission of NASA, LANL (Los Alamos National Laboratory), JHU/APL, SwRI (Southwest Research Institute), USC (University of Southern California), WVU (West Virginia University), The Aerospace Corporation, and the University of Bonn, Germany. TWINS is part of the NASA SMEX (Small Explorer) program. David J. McComas of SwRI is the PI (Principal Investigator) of the TWINS missions.",
+            "Type of Orbit": "Molniya orbit",
+            "Perigee (km)": "1100",
+            "Apogee (km)": "46000",
+            "Period (minutes)": "720",
+            "Date of Launch": "3-13-2008",
+            "Launch Site": "VAFB",
+            "Source": "https://earth.esa.int/web/eoportal/satellite-missions/t/twins"
+        },
+        {
+            "Current Official Name of Satellite": "UARS",
+            "Operator/Owner": "NASA",
+            "Description": "Before UARS, little was known about the atmospheric region between 80 kilometers and 300 kilometers above the Earth, since radio-equipped balloons would explode at that altitude, and ordinary satellites burn up. UARS orbited at a safe 600-kilometer altitude, aiming its cameras at the atmosphere below. Although the mission was originally intended to last only 3 years, its deployment was long enough to observe an entire 11-year solar cycle. Some of the mission’s most important contributions came from the four instruments onboard that measured concentrations and distribution of gases important to ozone depletion, climate change and other atmospheric phenomena. Data collected from UARS offered conclusive evidence that chlorine in the atmosphere - originating from human-produced chlorofluorocarbons - is at the root of the ozone hole.",
+            "Type of Orbit": "Circular orbit",
+            "Perigee (km)": "574",
+            "Apogee (km)": "575",
+            "Period (minutes)": "96",
+            "Date of Launch": "9/12/1991",
+            "Launch Site": "Kennedy LC-39A",
+            "Source": "https://eospso.nasa.gov/missions/upper-atmosphere-research-satellite",
+            "Active": "FALSE"
+        },
+        {
+            "Current Official Name of Satellite": "Viking",
+            "Operator/Owner": "Swedish Space Corporation",
+            "Description": "Sweden's first satellite, Viking, was launched on 22 February 1986 as a piggyback payload on the Ariane-1 rocket that orbited the French remote sensing satellite SPOT 1. The satellite conducted a very successful magnetospheric research mission until 12 May 1987. The Viking project was managed by the Swedish Space Corporation (SSC) under contract from the Swedish Board for Space Activities, the government space agency. SSC is a government-owned organization responsible for the execution of Sweden´s space program. The satellite was developed by SAAB Space with Boeing Aerospace as a major subcontractor.\n\nViking's perigee boost motor placed this relatively small satellite (286 kg) into a final 817 km - 13,530 km polar orbit, where it conducted scientific observations of complex plasma processes in the magnetosphere and ionosphere of the earth. The satellite carries experiments to measure electric fields, magnetic fields, charged particles, waves, and auroral images. These experiments were supplied by scientific teams from Sweden, Canada, Denmark, France, Norway, the United States, and the Federal Republic of Germany.",
+            "Type of Orbit": "Geocentric",
+            "Perigee (km)": "801",
+            "Apogee (km)": "13538",
+            "Period (minutes)": "261",
+            "Date of Launch": "2/22/1986",
+            "Launch Site": "Guiana Space Centre",
+            "Source": "https://space.skyrocket.de/doc_sdat/viking.htm"
+        },
+        {
+            "Current Official Name of Satellite": "Wind",
+            "Operator/Owner": "European Space Agency",
+            "Description": "Wind is a spin stabilized spacecraft launched with a Delta II rock on November 1, 1994. After several orbits through the magnetosphere, Wind was placed in a halo orbit around the L1 Lagrange point -- more than 200 Re upstream of Earth -- in early 2004 to observe the unperturbed solar wind that is about to impact the magnetosphere of Earth. Wind and Polar were part of the stand-alone Global Geospace Science (GGS) program, a subset of the International Solar Terrestrial Physics (ISTP) program which included the additional missions Geotail, SoHO and Cluster. The objective of the ISTP program was to study the origin of solar variability and activity, the transport of manifestations of that activity to the Earth via plasma processes, and the cause-and-effect relationships between that time varying energy transport and the near-earth environment.",
+            "Type of Orbit": "Heliocentric",
+            "Perigee (km)": "N/A",
+            "Apogee (km)": "N/A",
+            "Period (minutes)": "N/A",
+            "Date of Launch": "11/1/1994",
+            "Launch Site": "Cape Canaveral SLC-17",
+            "Source": "https://wind.nasa.gov/"
+        },
+        {
+            "Current Official Name of Satellite": "XMM-Newton",
+            "Operator/Owner": "European Space Agency",
+            "Description": "XMM-Newton is detecting more X-ray sources than any previous satellite and is helping to solve many cosmic mysteries of the violent Universe, from what happens in and around black holes to the formation of galaxies in the early Universe. It is designed and built to return data for at least a decade.\nIt is the biggest science satellite ever built in Europe. Its telescope mirrors are the most sensitive ever developed in the world, and with its sensitive detectors, it sees much more than any previous X-ray satellite.",
+            "Type of Orbit": "N/A",
+            "Perigee (km)": "114000",
+            "Apogee (km)": "7000",
+            "Period (minutes)": "2880",
+            "Date of Launch": "May 1983",
+            "Launch Site": "Guiana Space Centre",
+            "Source": "https://www.esa.int/Science_Exploration/Space_Science/XMM-Newton_overview"
+        },
+        {
+            "Current Official Name of Satellite": "Yohkoh (Solar-A)",
+            "Operator/Owner": "JAXA",
+            "Description": "Solar-A is a Japanese solar physics mission of JAXA, formerly ISAS (Institute of Space and Astronautical Science) at the University of Tokyo. The overall objective is the study of high-energy phenomena on the sun's visible disk (solar flares, dynamics of solar corona and active regions with focus on time and spectral resolution) through X-ray observations and energetic neutrons (part of gamma-ray region). Primary science objectives are: a) to further the understanding of the magnetofluid dynamics of the repeated expansion of the solar corona, b) clarification of the changes in the shape of the solar corona, and c) the study of the mechanism underlying the occurrence of plasma disturbance phenomena in interplanetary space.",
+            "Type of Orbit": "Slghtly eliptical",
+            "Perigee (km)": "525",
+            "Apogee (km)": "792",
+            "Period (minutes)": "97",
+            "Date of Launch": "8/30/1998",
+            "Launch Site": "Kagoshima M1",
+            "Source": "https://directory.eoportal.org/web/eoportal/satellite-missions/s/solar-a",
+            "Active": "FALSE"
+        }
+    ]
+}
