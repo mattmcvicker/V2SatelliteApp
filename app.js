@@ -403,14 +403,12 @@ $(document).ready(function () {
             var site = document.getElementById("site");
             var moreinfo = document.getElementById("moreinfo");
             var url = document.getElementById("url");
-            purpose.innerHTML = "Purpose " + newData[i]["Purpose"]
+            purpose.innerHTML = "Purpose: " + newData[i]["Purpose"]
             type.innerHTML = "Type of Orbit: " + newData[i]["Type of Orbit"]
             period.innerHTML = "Period: " + newData[i]["Period (minutes)"]
             launch.innerHTML = "Launch Date: " + newData[i]["Date of Launch"]
-            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]
-            moreinfo.innerHTML = "More information: ";
-            url.setAttribute("href", newData[i]["Source"])
-            url.innerHTML = newData[i]["Source"]
+            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]            
+            url.setAttribute("href", newData[i]["Source"]);
           }
         }
       }
