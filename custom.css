@@ -168,3 +168,13 @@ h3.modalTitle {
   text-decoration: none;
   cursor: pointer !important;
 }
+
+.p {
+  padding-left: 5px;
+  display: inline;
+  font-weight: lighter;
+}
+
+.q {
+  padding-left: 30px;
+}

@@ -16,6 +16,7 @@ $(document).ready(function () {
       // Create a WorldWindow globe on the specified HTML5 canvas
       this.wwd = new WorldWind.WorldWindow(canvasId);
       // this.wwd.addEventListener("mousemove", function() {
+      //   console.log("FUCK YEAH ITS FUCKING WORKING FUCKIGN BITCH LEGTS")
       // });
       // Holds the next unique id to be assigned to a layer
       this.nextLayerId = 1;
@@ -212,7 +213,7 @@ $(document).ready(function () {
   function getSatelliteMetaData() {
     return new Promise((resolve) => [
       setTimeout(() => {
-        let data = $.getJSON("./assets/moreData.json");
+        let data = $.getJSON("./assets/newest.json");
         console.log(data);
         resolve(data);
       }, 100)
@@ -266,10 +267,7 @@ $(document).ready(function () {
             }
           }
         }
-<<<<<<< HEAD
-=======
         console.log("SET:", set);        
->>>>>>> 39166a6fb98f3d9141b61c8a1f06b90b9ec01367
 
         console.log(data, Ids);
         let formattedData = [data, Ids];
@@ -293,72 +291,6 @@ $(document).ready(function () {
     // satelliteNames returns a nested array with the ids and names for all of the satellites
     console.log("SATELLITE NAMES:", satelliteNames);
     //* @param satelliteNames[0] is an array with all satellite Ids (need these to query coordinates)
-<<<<<<< HEAD
-    const coordsArray = await queryCoords(purgeData[1]); //coordinate array
-    console.log("Coords array:", coordsArray);
-    for (let i = 0; i < coordsArray?.data?.Result?.Data[1].length; i++) {
-      //! Set placemark attributes. Declared inside for loop so each satellite can have unique properties
-      var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
-      // Wrap the canvas created above in an ImageSource object to specify it as the placemarkAttributes image source.
-      placemarkAttributes.imageSource = new WorldWind.ImageSource(canvas);
-      // Define the pivot point for the placemark at the center of its image source.
-      placemarkAttributes.imageOffset = new WorldWind.Offset(
-        WorldWind.OFFSET_FRACTION,
-        0.5,
-        WorldWind.OFFSET_FRACTION,
-        0.5
-      );
-      placemarkAttributes.imageScale = 15;
-      placemarkAttributes.imageColor = WorldWind.Color.YELLOW;
-      //* @param satelliteNames[1] is an array with all satellite names
-      placemarkAttributes.label = purgeData[0][i]["Current Official Name of Satellite"];
-
-      //! Set placemark highlight attributes. Done inside for loop so each satellite can have unique highlight properties
-      // Note that the normal attributes are specified as the default highlight attributes so that all properties
-      // are identical except the image scale. You could instead vary the color, image, or other property
-      // to control the highlight representation.
-      var highlightAttributes = new WorldWind.PlacemarkAttributes(
-        placemarkAttributes
-      );
-
-      highlightAttributes.imageScale = 20;
-      highlightAttributes.imageColor = WorldWind.Color.RED;
-
-
-      let lat = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Latitude[1][0];
-      let long = coordsArray.data?.Result?.Data[1][i]?.Coordinates[1][0]?.Longitude[1][0];
-      let name = coordsArray.data?.Result?.Data[1][i]?.Id;
-
-      console.log("Placemark attributes;", placemarkAttributes);
-
-      // console.log("Placing coordinates:", lat, long)
-      var placemarkPosition = new WorldWind.Position(
-        lat,
-        long,
-        1000000
-      );
-      var placemark = new WorldWind.Placemark(
-        placemarkPosition,
-        true,
-        placemarkAttributes
-      );
-
-      // console.log("Place mark", i, ":", placemark);
-
-      // Draw placemark at altitude defined above, relative to the terrain.
-      placemark.altitudeMode = WorldWind.RELATIVE_TO_GROUND;
-      // Assign highlight attributes for the placemark.
-      placemark.highlightAttributes = highlightAttributes;
-
-      // Create the renderable layer for placemarks.
-      var placemarkLayer = new WorldWind.RenderableLayer("Custom Placemark");
-
-      // Add the placemark to the layer.
-      placemarkLayer.addRenderable(placemark);
-
-      // Add the placemarks layer to the WorldWindow's layer list.
-      globe.wwd.addLayer(placemarkLayer);
-=======
     //* @param satelliteNames[1] is an array with all satellite Names
     //! Need to make requests in smaller chunks so that we don't overload the API
 
@@ -482,7 +414,6 @@ $(document).ready(function () {
         // Add the placemarks layer to the WorldWindow's layer list.
         globe.wwd.addLayer(placemarkLayer);
       }
->>>>>>> 39166a6fb98f3d9141b61c8a1f06b90b9ec01367
     }
   }
 
@@ -516,29 +447,6 @@ $(document).ready(function () {
         globe.wwd.goToAnimator.goTo(new WorldWind.Location(position?.latitude, position?.longitude));
         console.log("testing + " + " " + title);
         title.innerHTML = pickList.objects[0].userObject.label;
-<<<<<<< HEAD
-        console.log(pickList.objects[0])
-        console.log(satelliteData[0])
-        var newData = satelliteData[0]
-        for (var i = 0; i < newData.length; i++) {
-          if (title.innerHTML == newData[i]["Current Official Name of Satellite"]) {
-            var purpose = document.getElementById("purpose");
-            var type = document.getElementById("type");
-            var period = document.getElementById("period");
-            var launch = document.getElementById("launch");
-            var site = document.getElementById("site");
-            var moreinfo = document.getElementById("moreinfo");
-            var url = document.getElementById("url");
-            purpose.innerHTML = "Purpose " + newData[i]["Purpose"]
-            type.innerHTML = "Type of Orbit: " + newData[i]["Type of Orbit"]
-            period.innerHTML = "Period: " + newData[i]["Period (minutes)"]
-            launch.innerHTML = "Launch Date: " + newData[i]["Date of Launch"]
-            site.innerHTML = "Launch Site: " + newData[i]["Launch Site"]
-            moreinfo.innerHTML = "More information: ";
-            url.setAttribute("href", newData[i]["Source"])
-            url.innerHTML = newData[i]["Source"]
-          }
-=======
         console.log(pickList.objects[0]);
         console.log(satelliteData);
         var newData = satelliteData[pickList.objects[0].userObject.index];
@@ -546,18 +454,19 @@ $(document).ready(function () {
 
         if (title.innerHTML == newData["Current Official Name of Satellite"]) {
           var purpose = document.getElementById("purpose");
+          var op = document.getElementById("operator");
           var type = document.getElementById("type");
           var period = document.getElementById("period");
           var launch = document.getElementById("launch");
           var site = document.getElementById("site");
           var url = document.getElementById("url");
-          purpose.innerHTML = "Description: " + newData["Description"]
-          type.innerHTML = "Type of Orbit: " + newData["Type of Orbit"]
-          period.innerHTML = "Period: " + newData["Period (minutes)"]
-          launch.innerHTML = "Launch Date: " + newData["Date of Launch"]
-          site.innerHTML = "Launch Site: " + newData["Launch Site"]
+          op.innerHTML = newData["Operator/Owner"]
+          purpose.innerHTML = newData["Description"]
+          type.innerHTML = newData["Type of Orbit"]
+          period.innerHTML = newData["Period (minutes)"] + " minutes"
+          launch.innerHTML = newData["Date of Launch"]
+          site.innerHTML = newData["Launch Site"]
           url.setAttribute("href", newData["Source"]);
->>>>>>> 39166a6fb98f3d9141b61c8a1f06b90b9ec01367
         }
 
       }
